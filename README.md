@@ -12,3 +12,8 @@ LISTADO DE REFERENCIA:
 3. https://www.planteriaurbana.com.ar/
 4. https://www.casalibra.com.ar/
 5. https://elrincondefilomena.empretienda.com.ar/
+
+Sobre nosotros: 
+Somos Federico y Josefina dos amigos viviendo en Mar del Plata. Compartimos el gusto por las plantas y la programación! 
+Estamos ansiosos por ver nuestro proyecto terminado y aprender durante el proceso.
+
