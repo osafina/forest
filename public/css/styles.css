@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+.leftBar {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+    padding: 15px;
+}
+
+#logo {
+    display: flex;
+    width: 50%;
+    height: 50%; opacity: 0.5;
+}
+
+
+#productList {
+    list-style: none;
+}
+
+h3 {
+    font-weight: 400;
+}
