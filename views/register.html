@@ -1,0 +1,66 @@
+<form class="register" action="/" method ="get">
+    <h3>REGISTRO</h3>
+    <div>
+        <label for="name">Nombre y Apellido:</label>
+
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="name">Nombre de usuari@</label>
+
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="name">Fecha de nacimiento</label>
+
+        <input type="date" id="date" name="date" required>
+    </div>
+    <div>
+        <label for="name">Domicilio </label>
+
+        <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="registerBox">
+        <label for="compra">
+            Metódo de compra
+        </label>
+        <label>
+            Envío a todo el país.
+            <input type="checkbox" name="envio" value="envio">
+        </label>
+        <label>
+            Entrega en Mar del Plata.
+            <input type="checkbox" name="envio" value="Mar del Plata">
+        </label>
+        <label>
+            Entrega en Tandil.
+            <input type="checkbox" name="envio" value="Tandil">
+        </label>
+        <label>
+            Entrega en Balcarce.
+            <input type="checkbox" name="envio" value="Balcarce">
+        </label>
+    </div>
+    <div class="registerBox">
+        <label>
+            Foto de usuario
+            <input type="file" name="Foto de Usuario" value="Foto de Usuario">
+        </label>
+    </div>
+    <div class="registerBox">
+        <label>
+            Contraseña
+            <input type="password" name="contrasenia" value="contrasenia">
+        </label>
+    </div>
+    <div class="registerBox">
+        <label>
+            Confirmar contraseña
+            <input type="password" type="pattern" name="confirmar" value="confirmar">
+        </label>
+    </div>
+    
+        <a href="/home"><button>Enviar</button></a>
+        <button type="reset">Borrar datos</button>
+</form>
