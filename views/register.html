@@ -1,66 +1,165 @@
-<form class="register" action="/" method ="get">
-    <h3>REGISTRO</h3>
-    <div>
-        <label for="name">Nombre y Apellido:</label>
+<!DOCTYPE html>
+<html lang="en">
 
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="name">Nombre de usuari@</label>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Forest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+</head>
 
-        <input type="text" id="name" name="name" required>
-    </div>
-    <div>
-        <label for="name">Fecha de nacimiento</label>
+<body>
+    <main>
+        <header>
+            <section class='flexInicio'>
+                <div class="izquierda">
 
-        <input type="date" id="date" name="date" required>
-    </div>
-    <div>
-        <label for="name">Domicilio </label>
+                    <div id="logo">
+                        <img src="images/logo-forest.jpg">
+                    </div>
 
-        <input type="text" id="name" name="name" required>
-    </div>
+                    <div class="productsList">
+                        <a href="">
+                            <h3>PLANTAS</h3>
+                        </a>
+                        <a href="">
+                            <h3>DECO</h3>
+                        </a>
+                        <a href="">
+                            <h3>SUSTRATOS</h3>
+                        </a>
 
-    <div class="registerBox">
-        <label for="compra">
-            Metódo de compra
-        </label>
-        <label>
-            Envío a todo el país.
-            <input type="checkbox" name="envio" value="envio">
-        </label>
-        <label>
-            Entrega en Mar del Plata.
-            <input type="checkbox" name="envio" value="Mar del Plata">
-        </label>
-        <label>
-            Entrega en Tandil.
-            <input type="checkbox" name="envio" value="Tandil">
-        </label>
-        <label>
-            Entrega en Balcarce.
-            <input type="checkbox" name="envio" value="Balcarce">
-        </label>
-    </div>
-    <div class="registerBox">
-        <label>
-            Foto de usuario
-            <input type="file" name="Foto de Usuario" value="Foto de Usuario">
-        </label>
-    </div>
-    <div class="registerBox">
-        <label>
-            Contraseña
-            <input type="password" name="contrasenia" value="contrasenia">
-        </label>
-    </div>
-    <div class="registerBox">
-        <label>
-            Confirmar contraseña
-            <input type="password" type="pattern" name="confirmar" value="confirmar">
-        </label>
-    </div>
-    
-        <a href="/home"><button>Enviar</button></a>
-        <button type="reset">Borrar datos</button>
-</form>
+                    </div>
+
+                    <div class="actionsList">
+                        <a href="/register">
+                            <h3>Login</h3>
+                        </a>
+                        <a href="">
+                            <h3>Carrito</h3>
+                        </a>
+                        <a href="">
+                            <h3>Contacto</h3>
+                        </a>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="derecha">
+
+                    
+                    <form class="register" action="/" method="get">
+                        <h1>REGISTRO DEL USUARIO</h1>
+                        <div>
+                            <label for="name">Nombre y Apellido:</label>
+
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="name">Nombre de usuari@</label>
+
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label for="email">e-mail:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div>
+                            <label for="name">Fecha de nacimiento</label>
+
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div>
+                            <label for="name">Domicilio </label>
+
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div>
+                            <label>
+                            Entregas en : 
+                            </label>
+                        </div>
+                        
+
+                        <div class="registerBox">
+                            <label>
+                                <input type="checkbox" name="envio" value="Mar del Plata">
+                                 Mar del Plata.
+                            </label>
+                            <label>
+                                <input type="checkbox" name="envio" value="Tandil">
+                                Tandil.
+                            </label>
+                            <label>
+                                <input type="checkbox" name="envio" value="Balcarce">
+                                Balcarce.
+                            </label>
+                        </div>
+                        <div class="registerBox">
+                            <label>
+                                Foto de usuario
+                                <input type="file" name="Foto de Usuario" value="Foto de Usuario">
+                            </label>
+                        </div>
+                        <div class="registerBox">
+                            <label>
+                                Contraseña
+                                <input type="password" name="contrasenia" value="contrasenia">
+                            </label>
+                        </div>
+                        <div class="registerBox">
+                            <label>
+                                Confirmar contraseña
+                                <input type="password" type="pattern" name="confirmar" value="confirmar">
+                            </label>
+                        </div>
+
+                        <a href="/home"><button>Enviar</button></a>
+                        <button type="reset">Borrar datos</button>
+                    </form>
+
+                </div>
+
+
+        </header>
+
+    </main>
+    <footer>
+        <section class="bottomBar">
+
+            <div id="socialMedia">
+
+                <h3>Seguinos en nuestras redes sociales</h3>
+                <p> intagram</p>
+
+            </div>
+
+            <div class="envio">
+                <i class="fas fa-gift"></i>
+                <h3>Envío gratis desde $ 2.500</h3>
+                <p>Solo por estar registrad@ en nuestra página.</p>
+            </div>
+
+            <div class="seguridad">
+                <i class="fas fa-user-shield"></i>
+                <h3>Seguridad, de principio a fin</h3>
+                <p>¿No te gusta? ¡Devolvelo!.</p>
+            </div>
+
+            </div>
+
+        </section>
+        <div class="copyright">
+            <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>

@@ -2,10 +2,31 @@
 body {
     
     font-family: 'Quicksand', sans-serif;
-    background: rgb(255, 255, 255) url('/images/fondogoth.jpg');
+    background-color: black;
+    
 }
 
 /* HEAD */
+
+.siteimg {
+    display: flex;
+    flex-grow: wrap;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.lados {
+    width: 20%;    
+    display: none;
+}
+.centro {
+    width: 40%;
+    text-align: center;
+    display: block;
+    padding-left: 30px;
+
+}
 
 
 
@@ -19,9 +40,21 @@ body {
 
 .izquierda {
     background-color: white;
-    height: 400vh;
-    width: 35%;
+    height: 300vh;
+    width: 30%;
     
+}
+
+.productsList {
+    font-size: 10px;
+    position: relative;
+    text-align: left;
+}
+
+.actionsList {
+    font-size: 10px;
+    position: relative;
+    text-align: left;
 }
 
 
@@ -36,7 +69,7 @@ body {
 
 #logo img {
     padding-top: 100px;
-    position: relative;
+  
     width: 40%;
     padding-bottom: 60px;
     
@@ -93,22 +126,157 @@ font-family: 'Quicksand', sans-serif;
 .bottomBar {
     display: flex;
     flex-wrap: wrap;
-    width: 75%;
+    width: 100%;
     flex-direction: row;
-    justify-content:right ;
+    justify-content:space-around;
+    background-color: black;
+    color: #bebebe;
+    opacity: 0.4;
    
 
 }
 
 .bottomBar div {
     width:25%;
-    
+    padding: 15px;
 }
 
+.copyright {
+    padding: 10px;
+    padding: 15px;
+}
 
-/*DIFERESTES PANTALLAS*/  
+.copyright h4 {
+    text-align: left;
+    color: #666;
+    margin-bottom: 15px;
+    width: 45%;
+}
+
+/* REGISTRO LOGIN */
+
+.register {
+    color: #bebebe;
+    padding: 15px;
+    font-family: 'Quicksand' , sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+}
+
+.register h1{
+    padding-top: 15px;
+    color: #666;
+    padding-bottom: 20px;
+}
+.register div {
+    font-size: 20px;
+    color: #666;
+    text-align: left;
+}
+.registerBox {
+display: flex;
+padding: 15px;
+flex-direction: column;
+flex-wrap: wrap;
+width: 100%;
+text-align: left;
+align-items: center;
+justify-content: center;
+
+}
+
+.registerBox label {
+    padding: 10px; 
+
+}
+
+/*DIFERESTES PANTALLAS*/ 
+
 @media (min-width:769px) {
+
+    /* site logo inicio grande*/
+
+    .flexInicio {
+        display: flex;
+        box-sizing: border-box;
+        
+    }
     
+    .izquierda {
+        background-color: white;
+        height: 150vh;
+        width: 25%;
+        
+    }
+    .derecha {
+        width: 75%;
+        position: relative;
+    }
+    .actionsList{
+    font-size: 20px;
+    position: relative;
+    text-align: left;
+    }
+    .productsList{
+        font-size: 20px;
+    position: relative;
+    text-align: left;
+    }
+    
+    #logo{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: auto;
+    
+     
+    }
+    
+    #logo img {
+        padding-top: 100px;
+        position: relative;
+        width: 40%;
+        padding-bottom: 60px;
+        
+    }
+    
+    div {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    
+    }
+   
+    /* head pantalla grande*/
+
+    .siteimg {
+        display: flex;
+        flex-grow: wrap;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .lados {
+        width: 20%; 
+        display: block;   
+        height: 25vh; 
+    }
+    .centro {
+        width: 40%;
+        height: 25vh;
+        display: block;
+    }
+
+
+    /*productos pantalla grande*/
+
 .productos {
     padding:15PX;
     display: flex;
@@ -122,6 +290,16 @@ font-family: 'Quicksand', sans-serif;
     width: 25%;
 
 }
+
+/* footer grande*/
+
+
+.bottomBar i {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+ 
 }
 
 
