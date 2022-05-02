@@ -215,6 +215,10 @@ justify-content: center;
 
 }
 
+.descripcion {
+    color: #666;
+}
+
 /*DIFERESTES PANTALLAS*/ 
 
 @media (min-width:769px) {
