@@ -1,25 +1,121 @@
-* {
+
+body {
+    
+    font-family: 'Quicksand', sans-serif;
+    background: rgba(0, 0, 0, 0.7) url('/images/fondogoth.jpg');
+ 
+}
+
+/* LOGO SITE INICIO */
+
+.flexInicio {
+    display: flex;
     box-sizing: border-box;
+    
 }
-.leftBar {
-    display: flex;
-    flex-direction: column;
+
+.izquierda {
+    background-color: white;
+    height: 400vh;
     width: 20%;
-    height: 100%;
-    padding: 15px;
+    
 }
 
-#logo {
+
+#logo{
     display: flex;
-    width: 50%;
-    height: 50%; opacity: 0.5;
+    width: 100%;
+    justify-content: center;
+    padding: auto;
+
+ 
+}
+
+#logo img {
+    padding-top: 100px;
+    position: relative;
+    width: 40%;
+    padding-bottom: 60px;
+    
+}
+
+div {
+padding: 10px;
+text-align: center;
+font-family: 'Quicksand', sans-serif;
+
+}
+
+/* PRODUCTOS HOME */
+
+.precio {
+    font-size: 14px;
+    font-weight:450;
+    color: #03264C;
+}
+
+.descuento {
+    font-size: 10px;
+    color: #39b54a;
+}
+
+.productos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: auto;
+}
+
+.item article {
+    background-color: #FFF;
+    margin: 10px 0px;
+}
+
+.item img {
+    width: 100%;
+    
+}
+
+.main-article {
+    width: 100%;
+    
+    
+}
+
+.bottomBar {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    flex-direction: row;
+    justify-content:right ;
+   
+
+}
+
+.bottomBar div {
+    width:25%;
+    
 }
 
 
-#productList {
-    list-style: none;
+/*DIFERESTES PANTALLAS*/  
+@media (min-width:769px) {
+    
+.productos {
+    padding:15PX;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-h3 {
-    font-weight: 400;
+.item {
+    width: 25%;
+
 }
+}
+
+
+
+
