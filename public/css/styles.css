@@ -2,7 +2,7 @@
 body {
     
     font-family: 'Quicksand', sans-serif;
-    background-color: black;
+    background-color: white;
     
 }
 
@@ -129,10 +129,9 @@ font-family: 'Quicksand', sans-serif;
     width: 100%;
     flex-direction: row;
     justify-content:space-around;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+    border: solid 2px #bebebe;
     color: #bebebe;
-    opacity: 0.4;
-   
 
 }
 
@@ -224,7 +223,7 @@ justify-content: center;
     text-align: left;
     }
     .productsList{
-        font-size: 20px;
+    font-size: 20px;
     position: relative;
     text-align: left;
     }
@@ -234,8 +233,6 @@ justify-content: center;
         width: 100%;
         justify-content: center;
         padding: auto;
-    
-     
     }
     
     #logo img {
