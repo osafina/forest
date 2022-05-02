@@ -205,6 +205,16 @@ justify-content: center;
 
 }
 
+/*PAGINA PRODUCTO*/
+
+.img-producto {
+   
+    width: 80%;
+    padding-top: 45px;
+    text-align: center;
+
+}
+
 /*DIFERESTES PANTALLAS*/ 
 
 @media (min-width:769px) {
