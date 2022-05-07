@@ -11,11 +11,31 @@
     <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="siteimg">
-        <img class = "lados" src = "images/flores-izq.jpg" alt ="">
-        <img class = "centro" src="images/head-productos.jpg" alt="">
-        <img class = "lados" src = "images/flores-der.jpg" alt ="">
-     </div>
+    <section class ='flexInicio'>
+        <div class="izquierda">
+
+            <div id="logo">
+            <img src="images/logo-forest.jpg">
+            </div>
+
+            <div class ="productsList">
+                <a href=""><h3>PLANTAS</h3></a>
+                <a href=""><h3>DECO</h3></a>
+                <a href=""><h3>SUSTRATOS</h3></a>
+            
+            </div>
+
+            <div class ="actionsList">
+                <a href="/register"><h3>Crea tu cuenta</h3></a>
+                <a href="/carrito"><h3>Carrito</h3></a>
+                <a href=""><h3>Contacto</h3></a>
+                <a href="/login"></a><h3>Login</h3>
+            </ul>
+            </div>
+
+        </div>
+        
+        <div class="derecha">
 
     <form class="register" action="/" method ="get">
         <h3>REGISTRARME</h3>
@@ -30,7 +50,10 @@
                 <input type="password" name="contrasenia" value="contrasenia">
             </label>
         </div>
-            <a href="/home"><button>Enviar</button></a>
-    </form>       
+            <a href="./home.html"><button>Enviar</button></a>
+    </form>   
+        </div>    
+    </section>
     
 </body>
+</html>
