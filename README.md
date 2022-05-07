@@ -32,6 +32,9 @@ como para tener de referente al igual que lo que destacabamos con casa libra por
 Todos los sitios anteriores nos parecen una buena guía para seguir y proyectar nuestro sitio que saque lo que mas nos guste de los anteriores,
 y poner también nuestro toque personal uscamos que se vea verde, minimalista y un poco darksss también.
 
+Nuestro link de entrega para el sprint 1 : https://trello.com/b/TGBQbeoI/sprint-1 (ya lo terminamos)
+sprint 2: https://trello.com/b/j3w9QVKB/sprint-2.
+
 
 Sobre nosotros: 
 Somos Federico y Josefina dos amigos viviendo en Mar del Plata. Compartimos el gusto por las plantas y la programación! 
