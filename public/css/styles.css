@@ -2,7 +2,7 @@
 body {
     
     font-family: 'Quicksand', sans-serif;
-    background-color: white;
+    background-image:url("/images/leaves.jpg;");
     color: #666;
     
 }
@@ -26,6 +26,7 @@ body {
     text-align: center;
     display: block;
     padding-left: 30px;
+    height: min-content;
 
 }
 
@@ -115,7 +116,6 @@ font-family: 'Quicksand', sans-serif;
     background-color: #FFF;
     margin: 10px 0px;
 }
-
 
 .item img {
     width: 100%;
