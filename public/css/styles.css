@@ -1,7 +1,7 @@
 
 body {
     
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Arimo', sans-serif;
     background-image:url("/images/leaves.jpg;");
     color: #666;
     
@@ -63,7 +63,6 @@ a {
     font-size: 10px;
     position: relative;
     text-align: left;
-    
 }
 
 
@@ -127,6 +126,15 @@ font-family: 'Quicksand', sans-serif;
     
     
 }
+.item {
+transition: 50ms;
+}
+.item:hover {
+    border: solid 3px;
+    border-radius: 15px;
+    border: linear-gradient(to bottom, rgb(0, 0, 0), white);;
+}
+
 
 /* FOOTER*/
 
