@@ -2,7 +2,6 @@
 body {
     
     font-family: 'Arimo', sans-serif;
-    background-image:url("/images/leaves.jpg;");
     color: #666;
     
 }
@@ -15,6 +14,10 @@ body {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+}
+
+h1{
+    font-size: 3em;
 }
 
 .lados {
@@ -71,8 +74,6 @@ a {
     width: 100%;
     justify-content: center;
     padding: auto;
-
- 
 }
 
 #logo img {
@@ -91,13 +92,78 @@ font-family: 'Quicksand', sans-serif;
 }
 
 /* PRODUCTOS HOME */
-
+button {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #000000;
+    box-shadow: 0px 15px 20px rgba(104, 104, 104, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+  
+  button:active {
+    transform: translateY(-1px);
+  }
 .precio {
     font-size: 14px;
     font-weight:450;
     color: #666;
 
 }
+
+h2 {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  h2:focus,
+  h2:hover {
+    color: rgb(61, 58, 58);
+  }
+  
+  h2:focus:after,
+  h2:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  h2:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
 
 .descuento {
     font-size: 10px;
@@ -127,14 +193,11 @@ font-family: 'Quicksand', sans-serif;
     
 }
 .item {
-transition: 50ms;
+    transition: 450ms;
 }
 .item:hover {
-    border: solid 3px;
-    border-radius: 15px;
-    border: linear-gradient(to bottom, rgb(0, 0, 0), white);;
+    box-shadow: #bebebe;
 }
-
 
 /* FOOTER*/
 
@@ -171,7 +234,66 @@ transition: 50ms;
 }
 
 /* REGISTRO LOGIN */
-
+/* From uiverse.io by @alexmaracinaru */
+.card {
+    width: 190px;
+    height: 254px;
+    background: #F4F6FB;
+    border: 1px solid white;
+    box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
+    -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+    -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
+   }
+   
+   .form {
+    padding: 25px;
+   }
+   
+   .card_header {
+    display: flex;
+    align-items: center;
+   }
+   
+   .card svg {
+    color: #7878bd;
+    margin-bottom: 20px;
+    margin-right: 5px;
+   }
+   
+   .form_heading {
+    padding-bottom: 20px;
+    font-size: 21px;
+    color: #7878bd;
+   }
+   
+   .field {
+    padding-bottom: 10px;
+   }
+   
+   .input {
+    border-radius: 5px;
+    background-color: #e9e9f7;
+    padding: 5px;
+    width: 100%;
+    color: #7a7ab3;
+    border: 1px solid #dadaf7
+   }
+   
+   .input:focus-visible {
+    outline: 1px solid #aeaed6;
+   }
+   
+   .input::placeholder {
+    color: #bcbcdf;
+   }
+   
+   label {
+    color: #B2BAC8;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 4px;
+   }
+   
 .register {
     color: #bebebe;
     padding: 15px;
@@ -213,10 +335,10 @@ justify-content: center;
 
 }
 
+
 /*PAGINA PRODUCTO*/
 
 .img-producto {
-   
     width: 80%;
     padding-top: 45px;
     text-align: center;
