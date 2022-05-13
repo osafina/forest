@@ -10,55 +10,58 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
 </head>
-<body>
-    <section class ='flexInicio'>
-        <div class="izquierda">
+    <body class="bodyLogin">
+        <header class = "header General">
+    
+        <div class="headerVideo">
+        <video   src = "images/fondo.mp4" muted autoplay loop></video>
+        </div>
+    
+        <div class="headerCapa"></div>
+    
+        <div class="header-General">
 
-            <div id="logo">
-            <img src="images/logo-forest.jpg">
-            </div>
+                <form class="login" action="/" method ="get">
+                   
+                    <a href="./home.html"> <img src ="images/logo.png" ></a>
+                    
+                    <h3>INGRESAR</h3>
+                
+                    <div class="in">
+                        <label for="name">Nombre de usuari@</label>
+                        <input class="in" type="text" id="name" name="name" placeholder = "Escribí tu nombre">
+                    </div>
+                    
+                    <div class="in">
+                        <label>Contraseña</label>
+                        <input class="in" type="password" name="contrasenia" placeholder="Escribí tu contraseña">
+                    </div>
 
-            <div class ="productsList">
-                <a href=""><h3>PLANTAS</h3></a>
-                <a href=""><h3>DECO</h3></a>
-                <a href=""><h3>SUSTRATOS</h3></a>
+                        <a href="./home.html">
+                            <div >
+                            <button class="btnRegister">Enviar</button>
+                            </div>
+                        </a>
+
+                </form>   
             
             </div>
-
-            <div class ="actionsList">
-                <a href="/register"><h3>Crea tu cuenta</h3></a>
-                <a href="/carrito"><h3>Carrito</h3></a>
-                <a href=""><h3>Contacto</h3></a>
-                <a href="/login"></a><h3>Login</h3>
-            </ul>
-            </div>
-
-        </div>
-        
-        <div class="derecha">
-
-    <form class="register" action="/" method ="get">
-        <form class="form card">
-            <div class="card_header">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path fill="currentColor" d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z"></path>
-              </svg>
-              <h1 class="form_heading">Login</h1>
-            </div>
-            <div class="field">
-              <label for="username">Nombre de Usuario</label>
-              <input class="input" name="username" type="text" placeholder="Username" id="username">
-            </div>
-            <div class="field">
-              <label for="password">Contraseña</label>
-              <input class="input" name="user_password" type="password" placeholder="Password" id="password">
-            </div>
-            <div class="field">
-              <button class="button">Login</button>
-            </div>
-          </form>
-    </form>
+       
+        <footer>
+            
+            
+                <div class="copyright">
+                    <h4>Copyright © 1999-2022 Forest Company.</h4>
+                </div>
+    
+           
+        </footer>
     </div>
-</body>
-</html>
+        </header>
+           
+    </body>
+    
+    </html>
+
+    
+      

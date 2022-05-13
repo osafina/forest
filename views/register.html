@@ -8,160 +8,136 @@
     <link href="css/styles.css" rel="stylesheet">
     <title>Forest</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    
     <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <main>
-        <header>
-            <section class='flexInicio'>
-                <div class="izquierda">
+    <header class = "header General">
 
-                    <div id="logo">
-                        <img src="images/logo-forest.jpg">
-                    </div>
+    <div class="headerVideo">
+    <video   src = "images/fondo.mp4" muted autoplay loop></video>
+    </div>
 
-                    <div class="productsList">
-                        <a href="">
-                            <h3>PLANTAS</h3>
-                        </a>
-                        <a href="">
-                            <h3>DECO</h3>
-                        </a>
-                        <a href="">
-                            <h3>SUSTRATOS</h3>
-                        </a>
+    <div class="headerCapa">
 
-                    </div>
+    </div>
 
-                    <div class="actionsList">
-                        <a href="/login">
-                            <h3>Login</h3>
-                        </a>
-                        <a href="/carrito">
-                            <h3>Carrito</h3>
-                        </a>
-                        <a href="/register">
-                            <h3>Crea tu cuenta</h3>
-                        </a>
-                        <a href="">
-                            <h3>Contacto</h3>
-                        </a>
-                    </div>
+    
+    </div>
 
+    <div class="header-General">
+        <div class="flexinicio">
+            <div class="logoYsite">
+                
+            <a href="./home.html"> <img src ="images/logo.png" ></a>
+            
+            <div class ="productsList">
+                <a href=""><h3>PLANTAS INTERIOR</h3></a>
+                <a href=""><h3>PLANTAS EXTERIOR</h3></a>
+                <a href=""><h3></h3></a>
+            
+            </div>
+
+            <div class ="actionsList">
+                <a href="/register"><h3>Crea tu cuenta</h3></a>
+                <a href="/login"><h3>Login</h3></a>
+                <a href="/carrito"><h3>Carrito</h3></a>
+                <a href=""><h3>Contacto</h3></a>
+                
+            </div>
+            </div>
+        
+        <div class="REGISTRARME">
+            <form class="register" action="/" method="get">
+                <h1>REGISTRO DEL USUARIO</h1>
+                <div>
+                    <label for="name">Nombre y Apellido:</label>
+                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre">
+                </div>
+                <div>
+                    <label for="name">Nombre de usuari@</label>
+                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre de usuario">
+                </div>
+                <div>
+                    <label for="email">e-mail:</label>
+                    <input type="email" name="email" id="email" placeholder = "Escribí tu mail">
+                </div>
+                <div>
+                    <label for="name">Fecha de nacimiento</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="name">Domicilio </label>
+                    <input type="text" id="name" name="name" placeholder = "Escribí tu domicilio">
+                </div>
+                <div>
+                    <label>
+                    Entregas en : 
+                    </label>
+                </div>
+                
+                <div class="registerBox">
+                    <label>
+                        <input type="checkbox" name="envio" value="Mar del Plata">
+                         Mar del Plata.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="envio" value="Tandil">
+                        Tandil.
+                    </label>
+                    <label>
+                        <input type="checkbox" name="envio" value="Balcarce">
+                        Balcarce.
+                    </label>
+                </div>
+                <div class="registerBox">
+                    <label>
+                        Foto de usuario
+                        <input type="file" name="Foto de Usuario" value="Foto de Usuario">
+                    </label>
+                </div>
+                <div class="registerBox">
+                    <label>
+                        Contraseña
+                        <input type="password" name="contrasenia" value="contrasenia" placeholder = "Escribí tu contraseña">
+                    </label>
+                </div>
+                <div class="registerBox">
+                    <label>
+                        Confirmar contraseña
+                        <input type="password" type="pattern" name="confirmar" value="confirmar" placeholder = "Confirma tu contraseña">
+                    </label>
                 </div>
 
+                <a href="/home"><button class="btnRegister">Enviar</button></a>
+                <button class="btnRegister" type="reset">Borrar datos</button>
+            </form>
 
-                <div class="derecha">
-
-                    
-                    <form class="card_header" action="/" method="get">
-                        <h1>REGISTRO DEL USUARIO</h1>
-                        <div>
-                            <label for="name">Nombre y Apellido:</label>
-
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div>
-                            <label for="name">Nombre de usuari@</label>
-
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div>
-                            <label for="email">e-mail:</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div>
-                            <label for="name">Fecha de nacimiento</label>
-
-                            <input type="date" id="date" name="date" required>
-                        </div>
-                        <div>
-                            <label for="name">Domicilio </label>
-
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div>
-                            <label>
-                            Entregas en : 
-                            </label>
-                        </div>
-                        
-
-                        <div class="registerBox">
-                            <label>
-                                <input type="checkbox" name="envio" value="Mar del Plata">
-                                 Mar del Plata.
-                            </label>
-                            <label>
-                                <input type="checkbox" name="envio" value="Tandil">
-                                Tandil.
-                            </label>
-                            <label>
-                                <input type="checkbox" name="envio" value="Balcarce">
-                                Balcarce.
-                            </label>
-                        </div>
-                        <div class="registerBox">
-                            <label>
-                                Foto de usuario
-                                <input type="file" name="Foto de Usuario" value="Foto de Usuario">
-                            </label>
-                        </div>
-                        <div class="registerBox">
-                            <label>
-                                Contraseña
-                                <input type="password" name="contrasenia" value="contrasenia">
-                            </label>
-                        </div>
-                        <div class="registerBox">
-                            <label>
-                                Confirmar contraseña
-                                <input type="password" type="pattern" name="confirmar" value="confirmar">
-                            </label>
-                        </div>
-
-                        <a href="/home"><button class="buttomR">Enviar</button></a>
-                        <button class="buttomR" type="reset">Borrar datos</button>
-                    </form>
-
-                </div>
-            </section>
-
-        </header>
-
-    </main>
-    <footer>
-        <section class="bottomBar">
-
-            <div id="socialMedia">
-                <i class="fab fa-instagram"></i>
-                <h3>Seguinos en nuestras redes sociales</h3>
-                <p> intagram</p>
-
-            </div>
-
-            <div class="envio">
-                <i class="fas fa-gift"></i>
-                <h3>Envío gratis desde $ 2.500</h3>
-                <p>Solo por estar registrad@ en nuestra página.</p>
-            </div>
-
-            <div class="seguridad">
-                <i class="fas fa-user-shield"></i>
-                <h3>Seguridad, de principio a fin</h3>
-                <p>¿No te gusta? ¡Devolvelo!.</p>
-            </div>
-
-            </div>
-
-        </section>
-        <div class="copyright">
-            <h4>Copyright © 1999-2020 MercadoLiebre S.R.L.</h4>
         </div>
+        
+        </div>
+   
+    <footer>
+    
+            <div class="copyright">
+                <h4>Copyright © 1999-2022 Forest Company.</h4>
+            </div>
 
-
+       
     </footer>
+</div>
+    </header>
+       
 </body>
 
 </html>
+            
+
+                    
+                    
+               

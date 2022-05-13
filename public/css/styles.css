@@ -1,304 +1,248 @@
+/* FONDO DE PAGINA*/
+*{
+    box-sizing: border-box;
+}
 
 body {
-    
-    font-family: 'Arimo', sans-serif;
-    color: #666;
-    
+
+    margin: 0;
+    font-size: 1rem;
+    color:#bebebe;
+    font-family: 'Roboto Flex', sans-serif;
+
 }
 
-/* HEAD */
+.header {
 
-.siteimg {
+    height: 150vh;
     display: flex;
-    flex-grow: wrap;
-    flex-direction: row;
+    color: #bebebe;
+}
+
+.header-General{
+
+    z-index: 2;
+    color: #bebebe;
+}
+
+.headerVideo {
+
+    position:absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    justify-content: space-between;
-}
-
-h1{
-    font-size: 3em;
-}
-
-.lados {
-    width: 20%;    
-    display: none;
-}
-.centro {
-    width: 40%;
-    text-align: center;
-    display: block;
-    padding-left: 30px;
-    height: min-content;
+    height: 200vh;
+    overflow: hidden;
 
 }
 
+video {
 
+    min-width: 100%;
+    min-height: 100%;
 
-/* LOGO SITE INICIO */
+    }
 
-.flexInicio {
+.headerCapa {
+
+    height: 200vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    z-index: 1;
+    opacity: .60;
+}
+
+.header-General h1 {
+
+    font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 0;
+    font-size: 50px;
+    color: #bebebe;
+    padding-bottom: 40px;
+    
+    
+}
+
+/* SITE Y LOGO*/
+
+.flexinicio {
+
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 40px;
+
+}
+
+.logoYsite {
+    
+    width: 20%;
+    border-radius: 15%;
+    height: 110vh;
     display: flex;
-    box-sizing: border-box;
-    
-}
-
-.izquierda {
-    background-color: white;
-    height: 300vh;
-    width: 30%;
-    color: #666;
-    
-}
-
-.productsList {
-    font-size: 10px;
-    position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:space-around;
+    opacity: .85;
+    font-family: 'Roboto Flex', sans-serif;
     text-align: left;
-    color: #666;
+    font-size: 20px;
+    border: 2px solid #3112a2;
+    border-radius: 5px;
+    padding: 15px;
+    
+      
 }
 
 a {
-    color: #666;
+    color: #bebebe;
+    text-decoration:none;
 }
 
-.actionsList {
-    font-size: 10px;
-    position: relative;
-    text-align: left;
-}
+.logoYsite img {
 
-
-#logo{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: auto;
-}
-
-#logo img {
-    padding-top: 100px;
-  
-    width: 40%;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    width: 45%;
+    padding-bottom: 30px;
     
 }
 
-div {
-padding: 10px;
-text-align: center;
-font-family: 'Quicksand', sans-serif;
-
-}
-
-/* PRODUCTOS HOME */
-button {
-    padding: 1.3em 3em;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
-    color: #000;
-    background-color: #fff;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  button:hover {
-    background-color: #000000;
-    box-shadow: 0px 15px 20px rgba(104, 104, 104, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-  
-  button:active {
-    transform: translateY(-1px);
-  }
-.precio {
-    font-size: 14px;
-    font-weight:450;
-    color: #666;
-
-}
-
-h2 {
-    font-size: 18px;
-    color: #e1e1e1;
-    font-family: inherit;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-  }
-  
-  h2:focus,
-  h2:hover {
-    color: rgb(61, 58, 58);
-  }
-  
-  h2:focus:after,
-  h2:hover:after {
-    width: 100%;
-    left: 0%;
-  }
-  
-  h2:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: rgb(0, 0, 0);
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
-  }
-
-.descuento {
-    font-size: 10px;
-    color: #a72cb0;
-}
-
+/* TARJETA DE PRODUCTOS */
 .productos{
-    width: 100%;
+
+    width: 75%;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
-    padding: auto;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
 }
 
-.item article {
-    background-color: #FFF;
-    margin: 10px 0px;
+.productos h1 {
+    width: 100%;
+    position: relative;
+}
+
+.item {
+    width: 25%;
+    border: 2px solid #3112a2;
+    border-radius: 5px;
+    padding: 15px;
+    
 }
 
 .item img {
-    width: 100%;
-    
+    position: relative;
+    width: 90%;
 }
+ strong {
+     width: 100%;
+     position: relative;
+     font-size: 25px;
+     padding-bottom:15px ;
+ }
 
-.main-article {
-    width: 100%;
-    
-    
-}
-.item {
-    transition: 450ms;
-}
-.item:hover {
-    box-shadow: #bebebe;
-}
 
 /* FOOTER*/
 
-
-
 .bottomBar {
+
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     flex-direction: column;
     justify-content:center;
-    background-color: rgb(255, 255, 255);
     color: #bebebe;
     align-items: center;
+    opacity: .85;
 
 }
 
 .bottomBar div {
+
     width:25%;
     text-align: center;
     padding: 15px;
 }
 
 .copyright {
+
     padding: 10px;
-    padding: 15px;
 }
 
 .copyright h4 {
+
     text-align: left;
     color: #666;
-    margin-bottom: 15px;
-    width: 45%;
+    
+    width: 100%;
 }
 
-/* REGISTRO LOGIN */
-/* From uiverse.io by @alexmaracinaru */
-.card {
-    width: 190px;
-    height: 254px;
-    background: #F4F6FB;
-    border: 1px solid white;
-    box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
-    -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
-    -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
-   }
-   
-   .form {
-    padding: 25px;
-   }
-   
-   .card_header {
-    display: flex;
-    align-items: center;
-   }
-   
-   .card svg {
-    color: #7878bd;
-    margin-bottom: 20px;
-    margin-right: 5px;
-   }
-   
-   .form_heading {
-    padding-bottom: 20px;
-    font-size: 21px;
-    color: #7878bd;
-   }
-   
-   .field {
-    padding-bottom: 10px;
-   }
-   
-   .input {
+/*LOGIN*/
+
+.bodyLogin {
+    margin: 0;
+    padding: 0;
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+
+.login {
+
+    border: 2px solid #3112a2;
     border-radius: 5px;
-    background-color: #e9e9f7;
-    padding: 5px;
-    width: 100%;
-    color: #7a7ab3;
-    border: 1px solid #dadaf7
-   }
-   
-   .input:focus-visible {
-    outline: 1px solid #aeaed6;
-   }
-   
-   .input::placeholder {
-    color: #bcbcdf;
-   }
-   
-   label {
-    color: #B2BAC8;
-    font-size: 14px;
-    display: block;
-    padding-bottom: 4px;
-   }
-   
+    padding: 17px;
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.login input {
+
+   width: 100%;
+   margin-bottom: 20px;
+   font-size: 16px;
+   height: 40px;
+   border: none;
+   border-bottom: 1px solid rgb(34, 34, 34);
+  
+}
+
+.login img{
+    
+    width: 100px;
+
+}
+
+ 
+
+
+/* REGISTRO  */
+
+.REGISTRARME {
+    width: 70%;
+    font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 0;
+    font-size: 40px;
+    color: #bebebe;
+    padding-bottom: 10px;
+}
+
 .register {
     color: #bebebe;
-    padding: 15px;
-    font-family: 'Quicksand' , sans-serif;
-    font-size: 16px;
+    padding: 10gpx;
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 10px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -310,17 +254,17 @@ h2 {
 
 .register h1{
     padding-top: 15px;
-    color: #666;
+    color: #bebebe;
     padding-bottom: 20px;
 }
 .register div {
     font-size: 20px;
-    color: #666;
+    color:#bebebe;
     text-align: left;
+    padding: 15px;
 }
 .registerBox {
 display: flex;
-padding: 15px;
 flex-direction: column;
 flex-wrap: wrap;
 width: 100%;
@@ -329,122 +273,114 @@ align-items: center;
 justify-content: center;
 
 }
+ 
+.btnRegister {
 
-.registerBox label {
-    padding: 10px; 
+color: #362593;
+border: 2px solid #3112a2;
+border-radius: 10px;
+padding: 10px 25px;
+background: transparent;
+padding: 10px;
 
+ }
+      
+ .btnRegister:hover {
+
+box-shadow: 2px 2px 15px #39036d inset;
 }
-
+      
+.btnRegister:active {
+        box-shadow: 2px 2px 20px #3c0370 inset;
+      }
+      
 
 /*PAGINA PRODUCTO*/
 
-.img-producto {
-    width: 80%;
-    padding-top: 45px;
-    text-align: center;
-
+.productoDetalle{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 }
 
-.descripcion {
-    color: #666;
+.productoDetalle h1 {
+    text-align: center;
+}
+.imagenDetalle{
+    width:60%;
+   
+
+}
+.imagenDetalle img {
+    width: 50%;
+    height: auto;  
+   
+}
+
+.descripcionProducto {
+    width: 20%;
+    font-size: 20px;
+    height: auto;
+    
+    
+}
+
+.copyrightProducto {
+    padding: 40px;
+    padding-top: 200px;
 }
 
 /*DIFERESTES PANTALLAS*/ 
+@media (max-width:400px){
+    .login {
+      width:90%;
+      text-align: center;
+    }
+    .flexinicio{
+        width:100%;
+    }
+
+    .logoYsite{
+        display: none;
+    }
+    h1 {
+        font-size: 15px;
+    }
+    .productos 
+    {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     width: 70%;
+     font-size: 10px;
+     
+    }
+    
+    
+
+    .item {
+        width: 100%;
+    }
+}
+
 
 @media (min-width:769px) {
 
     /* site logo inicio grande*/
-
-    .flexInicio {
-        display: flex;
-        box-sizing: border-box;
-        
-    }
     
-    .izquierda {
-        background-color: white;
-        height: 150vh;
-        width: 25%;
-        
-    }
-    .derecha {
-        width: 75%;
-        position: relative;
-    }
-    .actionsList{
-    font-size: 20px;
-    position: relative;
-    text-align: left;
-    }
-    .productsList{
-    font-size: 20px;
-    position: relative;
-    text-align: left;
-    }
-
-    .productsList a, .actionsList a{
-        text-decoration: none;
-    }
     
-    #logo{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        padding: auto;
-    }
-    
-    #logo img {
-        padding-top: 100px;
-        position: relative;
-        width: 40%;
-        padding-bottom: 60px;
-        
-    }
-    
-    div {
-    padding: 10px;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    
-    }
+  
    
     /* head pantalla grande*/
 
-    .siteimg {
-        display: flex;
-        flex-grow: wrap;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
-    }
-    
-    .lados {
-        width: 20%; 
-        display: block;   
-        height: 25vh; 
-    }
-    .centro {
-        width: 40%;
-        height: 25vh;
-        display: block;
-    }
 
 
     /*productos pantalla grande*/
 
-.productos {
-    padding:15PX;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-}
 
-.item {
-    width: 25%;
-
-}
 
 /* footer grande*/
 
@@ -461,12 +397,18 @@ justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    padding-left: 300px;
+    padding-top: 40px;
+    
 }
 
 .bottomBar div {
-    width: 30%;
+    flex-grow: 1;
+    
+}
+.copyright {
+    padding-left: 100px;
 }
  
 }
