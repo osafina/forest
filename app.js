@@ -8,6 +8,8 @@ const app = express ();
 
 app.use (express.static ('public'));
 
+app.set('view engine', 'ejs');
+
 const port = process.env.PORT || 3030;
 
 app.listen (3030, () => console.log ( 'El server funciona en el puerto 3030'))
