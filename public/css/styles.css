@@ -10,6 +10,7 @@ body {
     color:#bebebe;
     font-family: 'Roboto Flex', sans-serif;
 
+
 }
 
 .header {
@@ -17,12 +18,14 @@ body {
     height: 150vh;
     display: flex;
     color: #bebebe;
+    
 }
 
 .header-General{
 
     z-index: 2;
     color: #bebebe;
+    
 }
 
 .headerVideo {
@@ -31,7 +34,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 200vh;
+    height: 400vh;
     overflow: hidden;
 
 }
@@ -45,7 +48,7 @@ video {
 
 .headerCapa {
 
-    height: 200vh;
+    height: 400vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -72,9 +75,11 @@ video {
 
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   padding-top: 40px;
+  flex-direction: row;
+  
 
 }
 
@@ -135,6 +140,7 @@ a {
     border-radius: 5px;
     padding: 15px;
     
+    
 }
 
 .item img {
@@ -152,12 +158,12 @@ a {
 /* FOOTER*/
 
 .bottomBar {
-
+    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    flex-direction: column;
-    justify-content:center;
+    flex-direction: row;
+    justify-content:space-around;
     color: #bebebe;
     align-items: center;
     opacity: .85;
@@ -359,57 +365,44 @@ box-shadow: 2px 2px 15px #39036d inset;
      
     }
     
-    
-
     .item {
         width: 100%;
     }
+
+    .bottomBar{
+        display: none;
+    }
 }
 
-@media (min-width:769px) {
 
-    /* site logo inicio grande*/
-    
-    
+@media only screen and (max-width:769px) and (min-width:400px) {
+
+    /* site logo / productos inicio table*/
+    .logoYsite{
+        display: none;
+    }
+    .productos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .item{
+        width: 50%;
+        padding: 10px;
+        border: none;
+    }
   
    
-    /* head pantalla grande*/
+    /* footer pantalla tablet*/
+.bottomBar{
+        display: none;
+    }
 
 
-
-    /*productos pantalla grande*/
-
-
-
-/* footer grande*/
-
-
-.bottomBar i {
-    font-size: 2em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-}
-
-.bottomBar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-around;
-    padding-left: 300px;
-    padding-top: 40px;
-    
-}
-
-.bottomBar div {
-    flex-grow: 1;
-    
-}
-.copyright {
-    padding-left: 100px;
-}
- 
+.copyright{
+    width: 100%;}
 }
 
 

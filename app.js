@@ -1,29 +1,25 @@
 const express = require ('express');
+const rutasMain = require('./routes/mainRoutes.js');
+const rutasProducto = require('./routes/productsRoutes.js');
+const rutasUsers = require('./routes/usersRoutes.js');
+
+
 const app = express ();
-const path = require ('path');
+
 app.use (express.static ('public'));
+
+app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 3030;
 
 app.listen (3030, () => console.log ( 'El server funciona en el puerto 3030'))
 
-app.get ("/", (req, res) => 
-res.sendFile (path.join (__dirname, "/views/home.html")));
+app.use ("/", rutasMain);
+app.use('/',rutasProducto);
+app.use ("/", rutasUsers);
 
-app.get ("/register", (req, res) => 
-res.sendFile (path.join (__dirname, "/views/register.html")));
 
-app.get('/producto', (req,res) => {
-    res.sendFile(path.join(__dirname,'/views/producto.html'));
 
-});
 
-app.get('/carrito', (req,res) => {
-    res.sendFile(path.join(__dirname,'/views/carrito.html'));
 
-});
 
-app.get('/login', (req,res) => {
-    res.sendFile(path.join(__dirname,'/views/login.html'));
-
-});
