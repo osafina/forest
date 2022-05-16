@@ -9,24 +9,9 @@ body {
     font-size: 1rem;
     color:#bebebe;
     font-family: 'Roboto Flex', sans-serif;
-
-
-}
-
-.header {
-
-    height: 150vh;
-    display: flex;
-    color: #bebebe;
-    
-}
-
-.header-General{
-
     z-index: 2;
-    color: #bebebe;
-    
 }
+
 
 .headerVideo {
 
@@ -34,7 +19,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 400vh;
+    height: 300vh;
     overflow: hidden;
 
 }
@@ -44,11 +29,11 @@ video {
     min-width: 100%;
     min-height: 100%;
 
-    }
+}
 
 .headerCapa {
 
-    height: 400vh;
+    height: 300vh;
     width: 100vw;
     position: absolute;
     top: 0;
@@ -56,20 +41,21 @@ video {
     background-color: rgb(0, 0, 0);
     z-index: 1;
     opacity: .60;
+
 }
 
-.header-General h1 {
+/* SITE Y LOGO*/
+
+.flexinicio h1 {
 
     font-family: 'Roboto Flex', sans-serif;
     margin-bottom: 0;
     font-size: 50px;
     color: #bebebe;
     padding-bottom: 40px;
-    
-    
-}
+    z-index: 2;
 
-/* SITE Y LOGO*/
+}
 
 .flexinicio {
 
@@ -79,8 +65,9 @@ video {
   flex-wrap: wrap;
   padding-top: 40px;
   flex-direction: row;
+  z-index: 2;
+  color: #bebebe;
   
-
 }
 
 .logoYsite {
@@ -99,13 +86,15 @@ video {
     border: 2px solid #3112a2;
     border-radius: 5px;
     padding: 15px;
-    
+    z-index: 2;
       
 }
 
 a {
+    
     color: #bebebe;
     text-decoration:none;
+
 }
 
 .logoYsite img {
@@ -117,6 +106,7 @@ a {
 }
 
 /* TARJETA DE PRODUCTOS */
+
 .productos{
 
     width: 75%;
@@ -126,38 +116,46 @@ a {
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
+    z-index: 2;
 
 }
 
 .productos h1 {
+
     width: 100%;
     position: relative;
+
 }
 
 .item {
+
     width: 25%;
     border: 2px solid #3112a2;
     border-radius: 5px;
     padding: 15px;
     
-    
 }
 
 .item img {
+
     position: relative;
     width: 90%;
-}
- strong {
-     width: 100%;
-     position: relative;
-     font-size: 25px;
-     padding-bottom:15px ;
- }
 
+}
+
+strong {
+
+    width: 100%;
+     osition: relative;
+    font-size: 25px;
+    padding-bottom:15px ;
+ 
+}
 
 /* FOOTER*/
 
 .bottomBar {
+
     padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -167,6 +165,7 @@ a {
     color: #bebebe;
     align-items: center;
     opacity: .85;
+    z-index: 2;
 
 }
 
@@ -175,30 +174,26 @@ a {
     width:25%;
     text-align: center;
     padding: 15px;
+
 }
 
 .copyright {
 
     padding: 10px;
+    z-index: 2;
+    
 }
 
 .copyright h4 {
 
     text-align: left;
     color: #666;
-    
+    z-index: 2;
     width: 100%;
+
 }
 
 /*LOGIN*/
-
-.bodyLogin {
-    margin: 0;
-    padding: 0;
-    width:100%;
-    height: 100%;
-    position: relative;
-}
 
 .login {
 
@@ -207,9 +202,10 @@ a {
     padding: 17px;
     width: 300px;
     position: absolute;
-    top: 30%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 2;
 
 }
 
@@ -230,9 +226,10 @@ a {
 
 }
 
- 
-/* carrito */
-.headerVideoC {
+ /* CARRITO */
+
+ .headerVideoC {
+
     position: absolute;
     left: 0;
     top: 0;
@@ -240,113 +237,140 @@ a {
     height: auto;
     z-index: -10;
     visibility: visible;
-    }
+
+}
 
 .bodyCarr {
+
     display: flex;
     flex-wrap: wrap;
 }
+
 .bodyCarrito { 
+
     margin: 0;
     padding: 0;
     width: 70%;
     height: 100%;
     position: relative;
+    z-index: 2;
+
 }
+
 .itemCarrito{
+
     display: flex;
     flex-wrap: wrap;
     border: #bebebe solid 3px;
+
 }
+
 .section1 {
+
     width: 50%;
     text-align: center;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
 
 .section2 {
+
     width: 20%;
     text-align: center;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section3 {
+
     width: 10%;
     text-align: center;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section4 {
+
     width: 20%;
     text-align: center;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section1a {
+
     width: 50%;
     display: flex;
     justify-content: center;
     padding: 2px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section1a img{
+
     max-width: 100px;
     margin: 2px;
     align-items: center ;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section2a {
+
     width: 20%;
     text-align: center;
     padding: 2px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section3a {
+
     width: 10%;
     text-align: center;
     padding: 2px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .section4a {
+
     width: 20%;
     text-align: center;
     padding: 5px;
     border-bottom: #bebebe solid 5px;
+
 }
+
 .comprarCarr {
+
     width: auto;
     text-align: right;
-}
-.comprarButton {
-margin: 10px 10px;
-margin-right: 20 px;
-padding: 7px;
-color: #362593;
-border: 2px solid #3112a2;
-background: transparent;
-border-radius: 10px;
-}
-.comprarButton:hover {
-    box-shadow: 2px 2px 15px #39036d inset;
-}
-.comprarButton:active {
-    box-shadow: 2px 2px 20px #3c0370 inset;
+
 }
 
 /* REGISTRO  */
 
 .REGISTRARME {
+
     width: 70%;
     font-family: 'Roboto Flex', sans-serif;
     margin-bottom: 0;
     font-size: 40px;
     color: #bebebe;
     padding-bottom: 10px;
+    z-index: 2;
+
 }
 
 .register {
+
     color: #bebebe;
     padding: 10gpx;
     font-family: 'Roboto Flex', sans-serif;
@@ -358,119 +382,159 @@ border-radius: 10px;
     justify-content: center;
     align-items: center;
     align-self: start;
+
 }
 
 .register h1{
+
     padding-top: 15px;
     color: #bebebe;
     padding-bottom: 20px;
+
 }
+
 .register div {
+
     font-size: 20px;
     color:#bebebe;
     text-align: left;
     padding: 15px;
+
 }
+
 .registerBox {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-width: 100%;
-text-align: left;
-align-items: center;
-justify-content: center;
+ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+     width: 100%;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
 
 }
  
 .btnRegister {
 
-color: #362593;
-border: 2px solid #3112a2;
-background: transparent;
-border-radius: 10px;
-padding: 10px 25px;
-padding: 10px;
- }
- .btnRegister:hover {
+    color: #362593;
+    border: 2px solid #3112a2;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px 25px;
+    padding: 10px;
+ 
+}
+ 
+.btnRegister:hover {
 
-box-shadow: 2px 2px 15px #39036d inset;
+    box-shadow: 2px 2px 15px #39036d inset;
+
 }
       
 .btnRegister:active {
-        box-shadow: 2px 2px 20px #3c0370 inset;
-      }
-      
+ 
+   box-shadow: 2px 2px 20px #3c0370 inset;
 
+}
+      
 /*PAGINA PRODUCTO*/
 
 .productoDetalle{
+
     width: 70%;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    z-index: 2;
+
 }
 
 .productoDetalle h1 {
+    
     text-align: center;
-}
-.imagenDetalle{
-    width:60%;
-   
 
 }
+
+.imagenDetalle{
+
+    width:60%;
+   
+}
+
 .imagenDetalle img {
+
     width: 50%;
     height: auto;  
    
 }
 
 .descripcionProducto {
+
     width: 20%;
     font-size: 20px;
     height: auto;
-    
-    
+        
 }
 
 .copyrightProducto {
+    
     padding: 40px;
     padding-top: 200px;
+    z-index: 2;
+
 }
 
 /*DIFERESTES PANTALLAS*/ 
+
 @media (max-width:400px){
+
     .login {
-      width:90%;
-      text-align: center;
+
+        width:90%;
+        text-align: center;
+        
     }
+    
     .flexinicio{
+    
         width:100%;
+    
     }
 
     .logoYsite{
+    
         display: none;
+    
     }
+    
     h1 {
+    
         font-size: 15px;
+    
     }
-    .productos 
-    {
+    
+    .productos {
+     
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
      width: 70%;
      font-size: 10px;
+     z-index: 2;
      
     }
     
     .item {
+  
         width: 100%;
+  
     }
 
     .bottomBar{
+  
         display: none;
+  
     }
 }
 
@@ -479,30 +543,47 @@ box-shadow: 2px 2px 15px #39036d inset;
 
     /* site logo / productos inicio table*/
     .logoYsite{
+  
         display: none;
+  
     }
+  
     .productos{
+  
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-around;
+        z-index: 2;
+  
     }
+  
     .item{
+  
         width: 50%;
         padding: 10px;
         border: none;
+  
     }
   
    
     /* footer pantalla tablet*/
-.bottomBar{
+
+    .bottomBar{
+        
         display: none;
+    
     }
 
 
-.copyright{
-    width: 100%;}
+    .copyright{
+    
+        width: 100%;
+    
+        z-index: 2; 
+    
+    }
 }
 
 

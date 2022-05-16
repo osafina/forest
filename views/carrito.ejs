@@ -1,103 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <title>Forest</title>
-
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-
-    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap"
-        rel="stylesheet">
-
-</head>
+    <%- include ('partials/head')%>
 
 <body>
-    <header class="header General">
 
-        <div class="headerVideoC">
-            <video src="images/fondo.mp4" muted autoplay loop></video>
+    <%- include ('partials/header') %>
+
+<div class="flexinicio">
+
+    <div class="logoYsite">
+
+        <a href="/"> <img src="images/logo.png"></a>
+
+        <div class="productsList">
+            <a href="">
+            <h3>PLANTAS</h3>
+            </a>
+            <a href="">
+            <h3>DECO</h3>
+            </a>
+            <a href="">
+            <h3>SUSTRATOS</h3>
+            </a>
         </div>
 
-        <div class="headerCapa"></div>
+        <div class="actionsList">
+            <a href="/register">
+            <h3>Crea tu cuenta</h3>
+            </a>
+            <a href="/login">
+            <h3>Login</h3>
+            </a>
+            <a href="/carrito">
+            <h3>Carrito</h3>
+            </a>
+            <a href="">
+            <h3>Contacto</h3>
+            </a>
+        </div>
+    
+    </div>
+    
+    <section class="bodyCarrito">
 
+        <h1>Carrito</h1>
+        <article class="itemCarrito">
 
-        <div class="header-General">
-            <div class="flexinicio">
+            <div class="section1">
+                <h3>Item</h2>
+            </div>
+            
+            <div class="section2">
+                <h3>Precio</h2>
+            </div>
+                        
+            <div class="section3">
+                <h3>Cantidad</h2>
+            </div>
+            
+            <div class="section4">
+                <h3>Subtotial</h2>
+            </div>
+                        
+            <div class="section1a">
+                <img src="/images/colocasia-black.jpg" alt="">
+            
+                <div>Nombre de Producto
 
-                <div class="logoYsite">
-
-                    <a href="/"> <img src="images/logo.png"></a>
-
-                    <div class="productsList">
-                        <a href="">
-                            <h3>PLANTAS</h3>
-                        </a>
-                        <a href="">
-                            <h3>DECO</h3>
-                        </a>
-                        <a href="">
-                            <h3>SUSTRATOS</h3>
-                        </a>
-
-                    </div>
-
-                    <div class="actionsList">
-                        <a href="/register">
-                            <h3>Crea tu cuenta</h3>
-                        </a>
-                        <a href="/login">
-                            <h3>Login</h3>
-                        </a>
-                        <a href="/carrito">
-                            <h3>Carrito</h3>
-                        </a>
-                        <a href="">
-                            <h3>Contacto</h3>
-                        </a>
-
-                    </div>
                 </div>
-                <section class="bodyCarrito">
-                    <h1>Carrito</h1>
-                    <article class="itemCarrito">
-                        <div class="section1">
-                            <h3>Item</h2>
-                        </div>
-                        <div class="section2">
-                            <h3>Precio</h2>
-                        </div>
-                        <div class="section3">
-                            <h3>Cantidad</h2>
-                        </div>
-                        <div class="section4">
-                            <h3>Subtotial</h2>
-                        </div>
-                        <div class="section1a">
-                            <img src="/images/colocasia-black.jpg" alt="">
-                            <div>Nombre de Producto
-
-                            </div>
-                        </div>
-                        <div class="section2a">$0</div>
-                        <div class="section3a"> <label for="tentacles">N°</label>
-                            <input type="number" id="tentacles" name="tentacles" min="1" max="100">
-                        </div>
-                        <div class="section4a">$0</div>
-                    </article>
-                    <div class="comprarCarr">
-                        <button class="comprarButton">Comprar</button>
-                    </div>
-                </section>
-                </div>          
+            </div>
+            
+            <div class="section2a">$0</div>
+                        
+            <div class="section3a"> 
+                <label for="tentacles">N°</label>
+                <input type="number" id="tentacles" name="tentacles" min="1" max="100">
+            </div>
+                        
+            <div class="section4a">$0</div>
+        
+        </article>
+                    
+        <div class="comprarCarr">
+            <button class="btnRegister">Comprar</button>
         </div>
-    </header>  </div>
+    
+    </section>
+                
+</div>          
+        
+    
 </body>
 
 </html>
