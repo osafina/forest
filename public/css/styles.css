@@ -231,7 +231,109 @@ a {
 }
 
  
+/* carrito */
+.headerVideoC {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: -10;
+    visibility: visible;
+    }
 
+.bodyCarr {
+    display: flex;
+    flex-wrap: wrap;
+}
+.bodyCarrito { 
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    height: 100%;
+    position: relative;
+}
+.itemCarrito{
+    display: flex;
+    flex-wrap: wrap;
+    border: #bebebe solid 3px;
+}
+.section1 {
+    width: 50%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+
+.section2 {
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+.section3 {
+    width: 10%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+.section4 {
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+.section1a {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+    border-bottom: #bebebe solid 5px;
+}
+.section1a img{
+    max-width: 100px;
+    margin: 2px;
+    align-items: center ;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+.section2a {
+    width: 20%;
+    text-align: center;
+    padding: 2px;
+    border-bottom: #bebebe solid 5px;
+}
+.section3a {
+    width: 10%;
+    text-align: center;
+    padding: 2px;
+    border-bottom: #bebebe solid 5px;
+}
+.section4a {
+    width: 20%;
+    text-align: center;
+    padding: 5px;
+    border-bottom: #bebebe solid 5px;
+}
+.comprarCarr {
+    width: auto;
+    text-align: right;
+}
+.comprarButton {
+margin: 10px 10px;
+margin-right: 20 px;
+padding: 7px;
+color: #362593;
+border: 2px solid #3112a2;
+background: transparent;
+border-radius: 10px;
+}
+.comprarButton:hover {
+    box-shadow: 2px 2px 15px #39036d inset;
+}
+.comprarButton:active {
+    box-shadow: 2px 2px 20px #3c0370 inset;
+}
 
 /* REGISTRO  */
 
@@ -284,13 +386,11 @@ justify-content: center;
 
 color: #362593;
 border: 2px solid #3112a2;
+background: transparent;
 border-radius: 10px;
 padding: 10px 25px;
-background: transparent;
 padding: 10px;
-
  }
-      
  .btnRegister:hover {
 
 box-shadow: 2px 2px 15px #39036d inset;
@@ -402,9 +502,7 @@ box-shadow: 2px 2px 15px #39036d inset;
 
 
 .copyright{
-    width: 100%;
-}
- 
+    width: 100%;}
 }
 
 
