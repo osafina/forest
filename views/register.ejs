@@ -1,58 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
-    <title>Forest</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    
-    <link href="https://fonts.googleapis.com/css?family=Merienda&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100&display=swap" rel="stylesheet">
-
-</head>
+    <%- include ('partials/head')%>
 
 <body>
-    <header class = "header General">
-
-    <div class="headerVideo">
-    <video   src = "images/fondo.mp4" muted autoplay loop></video>
-    </div>
-
-    <div class="headerCapa">
-
-    </div>
-
     
-    </div>
+    <%- include ('partials/header')%>
 
-    <div class="header-General">
-        <div class="flexinicio">
-            <div class="logoYsite">
-                
-            <a href="/"> <img src ="images/logo.png" ></a>
+    <div class="flexinicio">
+    
+    <div class="logoYsite">
+                <a href="/"> <img src ="images/logo.png" ></a>
             
-            <div class ="productsList">
+        <div class ="productsList">
                 <a href=""><h3>PLANTAS INTERIOR</h3></a>
                 <a href=""><h3>PLANTAS EXTERIOR</h3></a>
                 <a href=""><h3></h3></a>
-            
-            </div>
+        </div>
 
-            <div class ="actionsList">
+        <div class ="actionsList">
                 <a href="/register"><h3>Crea tu cuenta</h3></a>
                 <a href="/login"><h3>Login</h3></a>
                 <a href="/carrito"><h3>Carrito</h3></a>
                 <a href=""><h3>Contacto</h3></a>
-                
-            </div>
-            </div>
+        </div>
+        
+    </div>
         
         <div class="REGISTRARME">
+            
             <form class="register" action="/" method="get">
                 <h1>REGISTRO DEL USUARIO</h1>
                 <div>
@@ -120,18 +96,15 @@
 
         </div>
         
-        </div>
+    </div>
    
-    <footer>
+<footer>
     
-            <div class="copyright">
-                <h4>Copyright © 1999-2022 Forest Company.</h4>
-            </div>
+    <div class="copyright">
+        <h4>Copyright © 1999-2022 Forest Company.</h4>
+    </div>
 
-       
-    </footer>
-</div>
-    </header>
+</footer>
        
 </body>
 

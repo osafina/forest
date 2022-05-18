@@ -1,0 +1,93 @@
+!DOCTYPE html>
+<html lang="en">
+
+    <%- include ('partials/head')%>
+
+<body>
+
+    <%- include ('partials/header') %>
+
+<div class="flexinicio">
+
+    <div class="logoYsite">
+
+        <a href="/"> <img src="images/logo.png"></a>
+
+        <div class="productsList">
+            <a href="">
+            <h3>PLANTAS</h3>
+            </a>
+            <a href="">
+            <h3>DECO</h3>
+            </a>
+            <a href="">
+            <h3>SUSTRATOS</h3>
+            </a>
+        </div>
+
+        <div class="actionsList">
+            <a href="/register">
+            <h3>Crea tu cuenta</h3>
+            </a>
+            <a href="/login">
+            <h3>Login</h3>
+            </a>
+            <a href="/carrito">
+            <h3>Carrito</h3>
+            </a>
+            <a href="">
+            <h3>Contacto</h3>
+            </a>
+        </div>
+    
+    </div>
+    <div class="create">
+
+        <div class="contenedorcreate">
+
+            <h2 class="tituloFormulario">Formulario de creación de productos</h2>
+
+            <form action="/index" method="post">
+        
+                <div>
+                    <label for="name" class="labelcreate">Nombre del producto:</label>
+                    <input type="text" id="name" name="name" placeholder="Ej: potus, ficus,etc" class="labelinput">
+                </div>
+                
+                <div>
+                    <label for="price" class="labelcreate">Precio del producto:</label>
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="labelinput">
+                </div>
+
+                <div>
+                    <label class="labelcreate">Foto de usuario</label>
+                    <input type="file" class="labelinput" name="Foto de Usuario" value="Foto de Usuario">
+                </div>
+                
+                <div>
+                    <label for="category" class="labelcreate">Categoría:</label>
+                    <select name="category" id="category" class="labelinput">
+                                <option value="">Elegí</option>
+                                <option value="in-sale">En oferta</option>
+                                <option value="visited">Últimos agregados</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="description" class="labelcreate">Descipción:</label>
+                    <textarea name="description" id="description" class="labelinput"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit" class="btnRegister">Guardar producto</button>
+                </div>
+                    
+            </form>
+        
+        </div>
+    
+    </div>
+
+</body>
+
+</html>
