@@ -41,7 +41,22 @@
         </div>
     
     </div>
-    <div todoslosProductos>
+    <div class = "todoslosProductos">
+
+        <% for (let i=0;i<productos.length; i++) { %>
+        
+        <div class="item">
+            <a href="/producto/<%= productos[i].id %>">
+            <div class="img-producto">
+              <img src="images/<%= productos[i].imagen %>">
+            </div>
+            <p> <%= productos[i].name %></p>
+            <strong>$ <%= productos[i].price %></strong>
+            <button class="btnRegister"> Agregar al carrito </button>
+            </a>
+        </div>
+
+        <% } %>
 
         
     </div>
