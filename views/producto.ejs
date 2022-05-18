@@ -50,24 +50,33 @@
                 
             </div>
             </div>
-        
-        <div class="productoDetalle">
-
-
-        <div class="imagenDetalle">
-            <h1> Colocasia black Coral </h1>
-            <img src="images/colocasia-black.jpg">
-        </div>
-
-        <div class="descripacionProducto">
-            <p>HOJAS NEGRAS DE ASPECTO BRILLANTE, con la llegada del frío se retrae y vuelve a brotar en primavera.</p>
-            <h2>$3500</h2>
-            <button class="btnRegister">Agregar al carrito</button>
-        </div>
-
-
-        </div>
-        
+        <section class="addProduct">
+            <label for="subida-imagen"> Imagen del producto:
+            <form class="subirImg" name="subida-imagen" type="POST" enctype="multipart/formdata" >
+                <input type="file" name="imagen" />
+            </form>
+            </label>
+            <label for="nombre"> Nombre:
+            <form class="nombreImg" name="nombre" type="POST" enctype="multipart/formdata" >
+                <input type="text" name="nombre" />
+            </form>
+        </label>
+        <label for="descripcion">
+            <form class="descImg" name="descripcion" type="POST" enctype="multipart/formdata" >
+                <input type="text" name="descripcion" />
+            </form>
+        </label>
+        <label for="precio"> Precio:
+            <form class="precioImg" name="precio" type="POST" enctype="multipart/formdata" >
+                <input type="number" name="precio" />
+            </form>
+        </label>
+        <label for="descuento"> Descuento:
+            <form name="descuento" type="POST" enctype="multipart/formdata" >
+                <input type="number" name="descuento" />
+            </form>
+        </label>
+    </section>
         </div>
    
     <footer>

@@ -18,6 +18,8 @@ app.use ("/", rutasMain);
 app.use('/',rutasProducto);
 app.use ("/", rutasUsers);
 
+app.use ( "/")
+
 
 
 
