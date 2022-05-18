@@ -146,7 +146,7 @@ a {
 strong {
 
     width: 100%;
-     osition: relative;
+     position: relative;
     font-size: 25px;
     padding-bottom:15px ;
  
@@ -414,6 +414,7 @@ strong {
 
 }
  
+/* BOTON PARA TODO*/
 .btnRegister {
 
     color: #362593;
@@ -484,6 +485,63 @@ strong {
     z-index: 2;
 
 }
+
+/* INDEX */
+
+.verindex {
+
+    width: 100%;
+    padding: 15px;
+    z-index: 2;
+    justify-content: space-around;
+    align-items: right;
+    font-size: 25px;
+    display: flex;
+    padding-left: 800px;
+
+}
+
+/* CREATE PROducTO*/
+.create {
+
+    z-index: 2;
+
+}
+.contenedorcreate {
+ 
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+    
+    
+}
+
+.contenedorcreate h2 {
+
+    
+    color: #bebebe;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    
+}
+
+.contenedorcreate div {
+    padding: 15px;
+}
+
+.labelcreate {
+font-size: 25px;
+}
+
+.labelinput {
+    font-size: 20px;
+}
+
+
 
 /*DIFERESTES PANTALLAS*/ 
 
