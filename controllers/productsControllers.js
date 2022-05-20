@@ -25,6 +25,10 @@ const productsControllers = {
         res.render('crearProducto');
     },
 
+    modificarProdycto: (req,res,next) => {
+        res.render ('modificiarProducto')
+    }
+
     store:(req,res) => {
         
         let productonew = {

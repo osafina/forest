@@ -355,6 +355,13 @@ strong {
 
 }
 
+/* Agregar Producto*/
+
+.addProduct {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /* REGISTRO  */
 
 .REGISTRARME {
