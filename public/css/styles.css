@@ -549,10 +549,29 @@ font-size: 25px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: row;
     z-index: 2;
+}
+
+.todoslosProductos .item {
+
+    width: 25%;
+    display: flex;
+
+}
+
+.todoslosProductos h1 {
+
+    font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 0;
+    font-size: 50px;
+    color: #bebebe;
+    padding-bottom: 40px;
+    z-index: 2;
+    width: 100%;
+
 }
 
 .todoslosProductos img{

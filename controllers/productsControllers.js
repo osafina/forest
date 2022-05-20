@@ -26,16 +26,19 @@ const productsControllers = {
     },
 
     store:(req,res) => {
-        /*console.log(products.length)
+        
         let productonew = {
-
+            id:productos.length+1,
             name: req.body.name,
             price: req.body.price,
             imagen: req.body.imagen,
             description: req.body.description,
 
         }
-        console.log(productonew);*/
+        productos.push(productonew);
+        let productoJSON =JSON.stringify(productos);
+        fs.writeFileSync(productosFilePath,productoJSON);
+       
     }
 
 
