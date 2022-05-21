@@ -1,1 +1,65 @@
-[{"id":1,"name":"Potus Lemon","price":450,"description":"Hermosos ejemplares de Potus lemon en maceta n12","imagen":"potusLemon.jpg"},{"id":2,"name":"Peperomia watermelon","price":3200,"description":"Sus preciosas hojas redondeadas que recuerdan la piel y la forma de una sandía","imagen":"peperomia.jpg"},{"id":3,"name":"Monstera Deliciosa","price":2500,"description":"La Monstera deliciosa fue una planta de interior muy popular durante los años 60 y 70, y ahora que la tendencia urban jungle está en auténtico apogeo, ha vuelto para quedarse.","imagen":"monstera-deliciosa.jpg"},{"id":4,"name":"Colocasia Black Coral","price":3500,"description":"HOJAS NEGRAS DE ASPECTO BRILLANTE, con la llegada del frío se retrae y vuelve a brotar en primavera.","imagen":"colocasia-black.jpg"},{"id":5,"name":"Orquidea Phalaenopsi Baby","price":4000,"description":"Combina unas flores espectaculares y duraderas con un régimen de fácil cuidado.","imagen":"orquidea.jpg"},{"id":6,"name":"Gomero","price":3000,"description":"Ficus elastica, llamado comúnmente árbol del caucho,​ o gomero, es una especie perennifolia.","imagen":"gomero.jpg"},{"id":7,"name":"Ficus Hawai","price":3700,"description":"Ficus Hawai o starlight en maceta de 3lts","imagen":"ficus.jpg"},{"id":8,"name":"Platycerium","price":"2500","imagen":"helecho.jpg","description":"La planta conocida popularmente como cuerno de alce "}]
+[
+    {
+        "id": 1,
+        "name": "Potus Lemon",
+        "price": 450,
+        "description": "Hermosos ejemplares de Potus lemon en maceta n12",
+        "imagen": "potusLemon.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Peperomia watermelon",
+        "price": 3200,
+        "description": "Sus preciosas hojas redondeadas que recuerdan la piel y la forma de una sandía",
+        "imagen": "peperomia.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Monstera Deliciosa",
+        "price": 2500,
+        "description": "La Monstera deliciosa fue una planta de interior muy popular durante los años 60 y 70, y ahora que la tendencia urban jungle está en auténtico apogeo, ha vuelto para quedarse.",
+        "imagen": "monstera-deliciosa.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Colocasia Black Coral",
+        "price": 3500,
+        "description": "HOJAS NEGRAS DE ASPECTO BRILLANTE, con la llegada del frío se retrae y vuelve a brotar en primavera.",
+        "imagen": "colocasia-black.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Orquidea Phalaenopsi Baby",
+        "price": 4000,
+        "description": "Combina unas flores espectaculares y duraderas con un régimen de fácil cuidado.",
+        "imagen": "orquidea.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Gomero",
+        "price": 3000,
+        "description": "Ficus elastica, llamado comúnmente árbol del caucho,​ o gomero, es una especie perennifolia.",
+        "imagen": "gomero.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Ficus Hawai",
+        "price": 3700,
+        "description": "Ficus Hawai o starlight en maceta de 3lts",
+        "imagen": "ficus.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Platycerium",
+        "price": "2500",
+        "imagen": "helecho.jpg",
+        "description": "La planta conocida popularmente como cuerno de alce "
+    },
+    {
+        "id": 9,
+        "name": "Dracaena trifasciata",
+        "price": "850",
+        "imagen": "images.jpg",
+        "description": "La Dracaena trifasciata es una planta perenne que florece en primavera."
+    }
+]

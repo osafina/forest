@@ -50,7 +50,7 @@ const productsControllers = {
                 productoseleccionado =productos[i];
             }
         }
-        res.render('detalleProducto',{productoseleccionado: productoseleccionado});
+        res.render('detalleProducto',{productoseleccionado: productoseleccionado})
         },
 
 
