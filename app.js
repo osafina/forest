@@ -27,7 +27,7 @@ const port = process.env.PORT || 3030;
 app.listen (3030, () => console.log ( 'El server funciona en el puerto 3030'))
 
 app.use ("/", rutasMain);
-app.use('/',rutasProducto);
+app.use('/products',rutasProducto);
 app.use ("/", rutasUsers);
 
 
