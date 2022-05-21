@@ -11,5 +11,5 @@ router.get('/crearProducto',productsControllers.create);
 router.post('/index',productsControllers.store);
 router.post('/modificarProducto', )
 
-router.get('index/:id/',productsControllers.detalle)
+router.get('/:id/',productsControllers.detalle)
 module.exports = router;

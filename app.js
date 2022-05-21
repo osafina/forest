@@ -30,11 +30,10 @@ app.use ("/", rutasMain);
 app.use('/',rutasProducto);
 app.use ("/", rutasUsers);
 
-app.use ( "/")
 
 
-app.use(express.urlencoded({extended: false}));
-app.use(express.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(logger('dev'));
 app.use(methodOverride('_method'));

@@ -7,10 +7,6 @@ const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const productsControllers = {
 
-    detalle: (req, res,next) => {
-    
-    res.render('detalleProducto');
-    },
 
     carrito: (req, res,next) => {
         
@@ -27,7 +23,7 @@ const productsControllers = {
 
     modificarProdycto: (req,res,next) => {
         res.render ('modificiarProducto')
-    }
+    },
 
     store:(req,res) => {
         
@@ -43,7 +39,19 @@ const productsControllers = {
         let productoJSON =JSON.stringify(productos);
         fs.writeFileSync(productosFilePath,productoJSON);
        
-    }
+    },
+
+    detalle: (req, res) => {
+        let id = req.params.id;
+        let productoseleccionado=null;
+        for (let i=0;i<productos.length;i++){
+            if(productos[i].id==id)
+            {
+                productoseleccionado =productos[i];
+            }
+        }
+        res.render('detalleProducto',{productoseleccionado: productoseleccionado});
+        },
 
 
 };
