@@ -21,8 +21,8 @@ const productsControllers = {
         res.render('crearProducto');
     },
 
-    modificarProdycto: (req,res,next) => {
-        res.render ('modificiarProducto')
+    modificarProducto: (req,res,next) => {
+        res.render ('modificiarProducto');
     },
 
     store:(req,res) => {
