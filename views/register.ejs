@@ -10,7 +10,7 @@
     <div class="flexinicio">
     
     <div class="logoYsite">
-                <a href="/"> <img src ="images/logo.png" ></a>
+                <a href="/"> <img src ="/images/logo.png" ></a>
             
         <div class ="productsList">
                 <a href=""><h3>PLANTAS INTERIOR</h3></a>
@@ -29,7 +29,7 @@
         
         <div class="REGISTRARME">
             
-            <form class="register" action="/" method="get">
+            <form class="register" action="/users" method="post">
                 <h1>REGISTRO DEL USUARIO</h1>
                 <div>
                     <label for="name">Nombre y Apellido:</label>
@@ -37,7 +37,7 @@
                 </div>
                 <div>
                     <label for="name">Nombre de usuari@</label>
-                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre de usuario">
+                    <input type="text" id="nameU" name="nameU" placeholder = "Escribí tu nombre de usuario">
                 </div>
                 <div>
                     <label for="email">e-mail:</label>
@@ -49,7 +49,7 @@
                 </div>
                 <div>
                     <label for="name">Domicilio </label>
-                    <input type="text" id="name" name="name" placeholder = "Escribí tu domicilio">
+                    <input type="text" id="adress" name="adress" placeholder = "Escribí tu domicilio">
                 </div>
                 <div>
                     <label>
@@ -74,7 +74,7 @@
                 <div class="registerBox">
                     <label>
                         Foto de usuario
-                        <input type="file" name="Foto de Usuario" value="Foto de Usuario">
+                        <input type="file" id = "imagen" name="imagen" value="Foto de Usuario">
                     </label>
                 </div>
                 <div class="registerBox">
@@ -90,7 +90,7 @@
                     </label>
                 </div>
 
-                <a href="/home"><button class="btnRegister">Enviar</button></a>
+                <a href="/home"><button type="submit" class="btnRegister">Enviar</button></a>
                 <button class="btnRegister" type="reset">Borrar datos</button>
             </form>
 
