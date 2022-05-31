@@ -21,8 +21,9 @@ const productsControllers = {
         res.render('crearProducto');
     },
 
-    modificarProducto: (req,res,next) => {
-        res.render ('modificiarProducto');
+    eliminarProducto: (req,res, next) => { 
+        let idParams = req.params.id;
+        let productToDelete = null;
     },
 
     store:(req,res) => {
@@ -53,6 +54,18 @@ const productsControllers = {
         res.render('detalleProducto',{productoseleccionado: productoseleccionado})
         },
 
+        modificarProducto: (req,res,next) => {
+            let idParams = req.params.id;
+            let productToEdit = null;
+            for (let i=0;i<productos.length;i++){
+                if(productos[i].id==id)
+                {
+                    productToEdit =productos[i];
+                }
+            }
+            
+            res.render ('modificarProducto', {productToEdit: productToEdit});
+        },
 
 };
 

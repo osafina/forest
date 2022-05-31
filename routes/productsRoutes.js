@@ -9,7 +9,7 @@ router.get("/carrito",productsControllers.carrito);
 
 router.get('/crearProducto',productsControllers.create);
 router.post('/',productsControllers.store);
-router.post('/modificarProducto', productsControllers.modificarProducto)
+router.get('/modificarProducto/:id/', productsControllers.modificarProducto)
 
 router.get('/:id/',productsControllers.detalle)
 module.exports = router;

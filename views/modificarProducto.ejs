@@ -1,40 +1,92 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 
     <%- include ('partials/head')%>
-    
-    <body class="bodyLogin">
-        <header class = "header General">
-    
-        <div class="headerVideo">
-        <video   src = "images/fondo.mp4" muted autoplay loop></video>
+
+<body>
+
+    <%- include ('partials/header') %>
+
+<div class="flexinicio">
+
+    <div class="logoYsite">
+
+        <a href="/"> <img src="/images/logo.png"></a>
+
+        <div class="productsList">
+            <a href="">
+            <h3>PLANTAS</h3>
+            </a>
+            <a href="">
+            <h3>DECO</h3>
+            </a>
+            <a href="">
+            <h3>SUSTRATOS</h3>
+            </a>
+        </div>
+
+        <div class="actionsList">
+            <a href="/register">
+            <h3>Crea tu cuenta</h3>
+            </a>
+            <a href="/login">
+            <h3>Login</h3>
+            </a>
+            <a href="/carrito">
+            <h3>Carrito</h3>
+            </a>
+            <a href="">
+            <h3>Contacto</h3>
+            </a>
         </div>
     
-        <div class="headerCapa"></div>
-    
-        <div class="header-General">
-
-                <main class="modificarProducto">
-                    <section>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </section>
-                </mai>
-            
-            </div>
-        <footer>
-            
-            
-                <div class="copyright">
-                    <h4>Copyright © 1999-2022 Forest Company.</h4>
-                </div>
-           
-        </footer>
     </div>
-        </header>
-           
-    </body>
-    
-    </html>
+    <div class="create">
 
+        <div class="contenedorcreate">
+
+            <h2 class="tituloFormulario">Formulario de modificación de productos</h2>
+
+            <form action="/products" method="post" >
+        
+                <div>
+                    <label for="name" class="labelcreate"> Nombre de producto </label>
+                    <input type="text" id="name" name="name" placeholder="Ej: potus, ficus,etc" class="labelinput" value="<%= productToEdit.name %>">
+                </div>
+                
+                <div>
+                    <label for="price" class="labelcreate">Precio:</label>
+                    <input type="text" id="price" name="price" placeholder="Ej: 5678" class="labelinput" value="<%= productToEdit.price%>">
+                </div>
+
+                <div>
+                    <label class="labelcreate"> Imagen de producto:</label>
+                    <input type="file" class="labelinput"  id= "imagen" name="imagen" value="Foto de Usuario">
+                </div>
+                
+                <div>
+                    <label for="category" class="labelcreate">Categoría:</label>
+                    <select name="category" id="category" class="labelinput">
+                                <option value="">Elegí</option>
+                                <option value="in-sale">En oferta</option>
+                                <option value="visited">Últimos agregados</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="description" class="labelcreate">Descripción:</label>
+                    <textarea name="description" id="description" class="labelinput"> <%= productToEdit.description%> </textarea>
+                </div>
+
+                <div>
+                    <a href="/modificarProducto" class="btnRegister">Editar Producto</a>
+                </div>
+                    
+            </form>
+        
+        </div>
+    
+    </div>
+
+</body>
+
+</html>
