@@ -47,7 +47,7 @@
 
             <h2 class="tituloFormulario">Formulario de modificación de productos</h2>
 
-            <form action="/products" method="post" >
+            <form action="/products/modificarProducto/<%= productToEdit.id %>?_method=put" method="post" >
         
                 <div>
                     <label for="name" class="labelcreate"> Nombre de producto </label>

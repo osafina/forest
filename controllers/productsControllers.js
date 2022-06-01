@@ -1,5 +1,7 @@
 const path = require ('path');
 const fs = require('fs');
+const { strictEqual } = require('assert');
+const { stringify } = require('querystring');
 
 const productosFilePath = path.join(__dirname,'../data/productosDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
@@ -65,6 +67,26 @@ const productsControllers = {
             }
             
             res.render ('modificarProducto', {productToEdit: productToEdit});
+        },
+        update: (req, res) => {
+            let idParams = req.params.id;
+            let productoAct = {
+                id: req.body.id,
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+            }
+            let newProducts = productos.filter( product => product.id != idParams)
+            newProducts.push(productoAct)
+
+            let productsJSON = JSON.stringify(products)
+            fs.writeFileSync (productosFilePath, productoJSON)
+
+            res.redirect ('products/detalleProducto' + idParams)
+
+        },
+        destroy: (req, res) {
+
         },
 
 };
