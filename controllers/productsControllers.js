@@ -25,14 +25,14 @@ const productsControllers = {
 
     eliminar: (req, res, next) => {
         let idParams = req.params.id;
-        let productToDelete = null;
-        for (let i = 0; i < productos.length; i++) {
-            if (productos[i].id == idParams) {
-                productToDelete = productos[i];
-            }
-        }
+        
+        let newProducts = productos.filter(productos => productos.id != idParams)
+        
+        let productoJSON = JSON.stringify(newProducts)
+        fs.writeFileSync(productosFilePath, productoJSON)
+        res.redirect('/products')
+        
 
-        res.render('eliminar', { productToDelete: productToDelete });
     },
 
     store: (req, res) => {
@@ -48,6 +48,8 @@ const productsControllers = {
         productos.push(productonew);
         let productoJSON = JSON.stringify(productos);
         fs.writeFileSync(productosFilePath, productoJSON);
+
+        res.redirect('/products');
     },
 
     detalle: (req, res) => {
@@ -69,24 +71,25 @@ const productsControllers = {
                 productToEdit = productos[i];
             }
         }
-
+       
         res.render('modificarProducto', { productToEdit: productToEdit });
     },
     update: (req, res) => {
         let idParams = req.params.id;
         let productoAct = {
-            id: req.body.id,
+            id: idParams,
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
         }
-        let newProducts = productos.filter(product => product.id != idParams)
+        console.log(productoAct)
+        let newProducts = productos.filter(productos => productos.id != idParams)
         newProducts.push(productoAct)
 
-        let productsJSON = JSON.stringify(products)
+        let productoJSON = JSON.stringify(newProducts)
         fs.writeFileSync(productosFilePath, productoJSON)
 
-        res.redirect('/detalleProducto/' + idParams)
+        res.redirect('/products/')
 
     },
 

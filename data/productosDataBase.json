@@ -7,13 +7,6 @@
         "imagen": "alocasia.jpg"
     },
     {
-        "id": 2,
-        "name": "Peperomia watermelon",
-        "price": 3200,
-        "description": "Sus preciosas hojas redondeadas que recuerdan la piel y la forma de una sandía",
-        "imagen": "peperomia.jpg"
-    },
-    {
         "id": 3,
         "name": "Monstera Deliciosa",
         "price": 2500,
@@ -89,5 +82,13 @@
         "price": "1500",
         "imagen": "aglaonema.jpg",
         "description": "Pertenece a la familia Araceae y es originaria de las selvas tropicales del sudeste asiático"
+    },
+    {
+        "id": 2,
+        "name": "peperomia watermelon",
+        "price": "3500",
+        "imagen": "peperomia.jpg",
+        "description": "Sus preciosas hojas redondeadas que recuerdan la piel y la forma de una sandía"
     }
 ]
+

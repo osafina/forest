@@ -39,6 +39,13 @@
                 <button class="btnRegister">Agregar al carrito</button>
             </div>
 
+            <div>
+                <a href="/products/modificarProducto/<%= productoseleccionado.id %> " class="btnRegister">EDITAR PRODUCTO</a>
+				<form action="/products/eliminar/<%= productoseleccionado.id %>?_method=delete" method="post">
+					<button type="submit" class="btnRegister">ELIMINAR</button>
+				</form>
+            </div>
+
         </div>
         
     </div>
