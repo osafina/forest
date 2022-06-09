@@ -1,7 +1,9 @@
 const path = require('path');
 const fs = require('fs');
+const multer = require('multer')
 const { strictEqual } = require('assert');
 const { stringify } = require('querystring');
+const { callbackify } = require('util');
 
 const productosFilePath = path.join(__dirname, '../data/productosDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
