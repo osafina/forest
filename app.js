@@ -7,6 +7,7 @@ const rutasUsers = require('./routes/usersRoutes.js');
 
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const logMiddleware = require('./middleware/logMiddleware');
 
 
 const bodyParser = require('body-parser');
@@ -30,6 +31,7 @@ const port = process.env.PORT || 3030;
 
 app.listen (3030, () => console.log ( 'El server funciona en el puerto 3030'))
 
+app.use(logMiddleware);
 app.use ("/", rutasMain);
 app.use('/products',rutasProducto);
 app.use ("/users", rutasUsers);

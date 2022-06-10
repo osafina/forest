@@ -38,7 +38,7 @@ const productsControllers = {
     },
 
     store: (req, res) => {
-
+        if (req.file) {
         let productonew = {
             id: productos.length + 1,
             name: req.body.name,
@@ -47,12 +47,13 @@ const productsControllers = {
             description: req.body.description,
 
         }
+
         productos.push(productonew);
         let productoJSON = JSON.stringify(productos);
         fs.writeFileSync(productosFilePath, productoJSON);
 
         res.redirect('/products');
-    },
+    } else { res.send('No adjunto la imgaen')}},
 
     detalle: (req, res) => {
         let id = req.params.id;
