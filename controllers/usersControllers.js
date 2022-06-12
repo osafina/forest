@@ -1,5 +1,6 @@
 const path = require ('path');
 const fs = require('fs');
+const {validationResult} = require('express-validator');
 
 
 const usuariosFilePath = path.join(__dirname,'../data/usuariosDataBase.json');
@@ -9,7 +10,7 @@ const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
 const usersControllers = {
 
     ingreso: (req, res,next) => {
-    res.render("login")
+    res.render("login");
 
     },
 
@@ -38,6 +39,14 @@ const usersControllers = {
         usuarios.push(usuarionew);
         let usuarioJSON =JSON.stringify(usuarionew);
         fs.writeFileSync(usuariosFilePath,usuarioJSON);
+    },
+    storeUser: (req, res) =>{
+    //Variable que almacena errores de validación.
+        let errores= validationResult(req);
+        if (!error.Empty()){
+            return res.render('register',
+            {mensajeError: errores.mapped()})
+        }
     }
 
 };
