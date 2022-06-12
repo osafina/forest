@@ -7,7 +7,7 @@
         
     <%- include ('partials/header') %>
 
-    <form class="login" action="/" method ="get">
+    <form class="login" action="/" method ="POST" >
         <a href="/"> <img src ="/images/logo.png" ></a>
         <h3>INGRESAR</h3>
                 
@@ -18,13 +18,13 @@
                     
         <div class="in">
             <label>Contraseña</label>
-            <input class="in" type="password" name="contrasenia" placeholder="Escribí tu contraseña">
+            <input class="in" type="password" name="password" placeholder="Escribí tu contraseña">
         </div>
-        <a href="./home.html">
+        
         <div >
-            <button class="btnRegister">Enviar</button>
+            <button class="btnRegister" type ="submit">Enviar</button>
         </div>
-        </a>
+        
 
     </form>   
             
