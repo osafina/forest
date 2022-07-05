@@ -31,6 +31,11 @@
             
             <form class="register" action="/users" method="post">
                 <h1>REGISTRO DEL USUARIO</h1>
+               <% if (locals && locals.mensajesDeError){ %> 
+                <% for (let error in mensajesDeError) { %> 
+                    <p><%= mensajesDeError[error].msj %> </p>
+                    <% } %> 
+                    <% } %> 
                 <div>
                     <label for="name">Nombre y Apellido:</label>
                     <input type="text" id="name" name="name" placeholder = "Escribí tu nombre">
