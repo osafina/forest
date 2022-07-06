@@ -20,8 +20,8 @@ router.get("/register", usersControllers.registro);
 
 router.get("/",usersControllers.index);
 
-router.post('/',validateCreateForm, usersControllers.store);
+router.post('/',validateCreateForm, usersControllers.processlogin);
 
-router.post('/login',validatelogin,usersControllers.processlogin);
+router.post('/login',usersControllers.processlogin);
 
 module.exports = router;

@@ -2,9 +2,11 @@ const path = require ('path');
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 
+
+
 const {check, validationResult, body}=require('express-validator');
 
-
+const User = require('../models/Users');
 
 const usuariosFilePath = path.join(__dirname,'../data/usuariosDataBase.json');
 const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
@@ -17,25 +19,33 @@ const usersControllers = {
 
     },
     processlogin: (req,res)=> {
-        let errors =validationResult(req);
+        const resultValidation = validationResult(req);
 
-        if(errors.isEmpty()){
-            for (let i=0;i<usuarios.length;i++){
-                if(usuarios[i].email == req.body.email){
-                    if (bcrypt.compareSync(req.body.password,req.body.password)){
-                        let usuarioAloguearse = usuarios[i];
-                        console.log('éntro bien');
-                        break;
-                    }
-                }
-            }
-            if (usuarioAloguearse == undefined){
-                return res.render('login',{errors: errors.errors})
-            }
-            req.session.usuariologueado =usuarioAloguearse;
-        }else{
-            return res.render('login',{errors});
+        if(resultValidation.errors.length > 0) {
+            return res.render('register',{
+                errors: resultValidation.mapped(),
+                oldData:req.body});
         }
+
+        let unserInDB= User.findByField('email',req.body.email);
+
+        if (unserInDB){
+            return res.render('register',{
+                errors: {
+                    email: {
+                        msg: 'este email ya se this.registro'}
+                },
+                oldData:req.body});
+        }
+
+        let userToCreate = {
+            ...req.body,
+              
+        }
+
+        let userCreated = User.create(userToCreate);
+
+        return res.send('Ok se guardo usuario');
     },
 
     registro: (req, res,next) => {
@@ -48,26 +58,6 @@ const usersControllers = {
         
     },
 
-    store: (req,res) => {
-        let errores= validationResult(req);
-        if (!error.Empty()){
-        let usuarionew = {
-            id:usuarios.length+1,
-            name: req.body.name,
-            email: req.body.email,
-            imagen: req.body.imagen,
-            password: req.body.password,
-            date: req.body.date,
-            adress: req.body.adress
-        }
-    
-
-        usuarios.push(usuarionew);
-        let usuarioJSON =JSON.stringify(usuarionew);
-        fs.writeFileSync(usuariosFilePath,usuarioJSON);
-        res.rendirect('usuarios')
-    
-} else { res.render('register', {errors: errors.array()})};
-    }}
+}
 
 module.exports = usersControllers;
