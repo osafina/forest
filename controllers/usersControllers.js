@@ -40,12 +40,11 @@ const usersControllers = {
 
         let userToCreate = {
             ...req.body,
-              
         }
 
         let userCreated = User.create(userToCreate);
 
-        return res.send('Ok se guardo usuario');
+        return res.redirect('home');
     },
 
     registro: (req, res,next) => {

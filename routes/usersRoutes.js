@@ -1,5 +1,6 @@
 const express = require ('express');
 const usersControllers = require('../controllers/usersControllers');
+const fileUpload = require('../middleware/multerMiddleware')
 
 const { body, check } = require('express-validator');
 const router = express.Router();
@@ -22,6 +23,6 @@ router.get("/",usersControllers.index);
 
 router.post('/',validateCreateForm, usersControllers.processlogin);
 
-router.post('/login',usersControllers.processlogin);
+router.post('/login', validatelogin, fileUpload ,usersControllers.processlogin);
 
 module.exports = router;
