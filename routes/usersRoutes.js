@@ -33,7 +33,8 @@ router.get("/register", usersControllers.registro);
 
 router.get("/",usersControllers.index);
 
-router.post('/',validateCreateForm, usersControllers.processlogin);
+router.post('/',fileUpload.single('imagen'), validateCreateForm, usersControllers.processlogin);
+
 
 router.post('/login', validatelogin ,usersControllers.processlogin);
 
