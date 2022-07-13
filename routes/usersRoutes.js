@@ -1,8 +1,25 @@
 const express = require ('express');
-const usersControllers = require('../controllers/usersControllers');
+const router = express.Router();
+
+const multer = require('multer');
+const path = require('path');
 
 const { body, check } = require('express-validator');
-const router = express.Router();
+
+const storage = multer.diskStorage({
+    destination:(req,file,cb)=> {
+        cb(null,'./public/images/avatar');
+    },
+    filename:(req,file,cb)=> {
+        
+        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+        cb(null,fileName);
+    }
+});
+
+const uploadFile = multer({storage});
+
+const usersControllers = require('../controllers/usersControllers');
 
 const validateCreateForm = [
     body('name').notEmpty().withMessage('Completar nombre.'),
@@ -17,11 +34,10 @@ const validatelogin = [
 
 router.get ("/login", usersControllers.ingreso);
 router.get("/register", usersControllers.registro);
-
 router.get("/",usersControllers.index);
 
-router.post('/',validateCreateForm, usersControllers.processlogin);
+router.post('/register',uploadFile.single('imagen'), usersControllers.processregister);
 
-router.post('/login',usersControllers.processlogin);
+
 
 module.exports = router;

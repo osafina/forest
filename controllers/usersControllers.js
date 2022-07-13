@@ -18,7 +18,7 @@ const usersControllers = {
     res.render("login");
 
     },
-    processlogin: (req,res)=> {
+    processregister: (req,res)=> {
         const resultValidation = validationResult(req);
 
         if(resultValidation.errors.length > 0) {
@@ -40,6 +40,7 @@ const usersControllers = {
 
         let userToCreate = {
             ...req.body,
+            imagen:req.file
               
         }
 
