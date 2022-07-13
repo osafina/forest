@@ -41,12 +41,12 @@ const usersControllers = {
         let userToCreate = {
             ...req.body,
             imagen:req.file
-              
+            
         }
 
         let userCreated = User.create(userToCreate);
 
-        return res.send('Ok se guardo usuario');
+        return res.redirect('home');
     },
 
     registro: (req, res,next) => {
