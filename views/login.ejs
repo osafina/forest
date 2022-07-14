@@ -7,13 +7,18 @@
         
     <%- include ('partials/header') %>
 
-    <form class="login" action="/" method ="POST" >
+    <form class="login" action="/users/login" method ="POST" >
         <a href="/"> <img src ="/images/logo.png" ></a>
         <h3>INGRESAR</h3>
                 
         <div class="in">
-            <label for="name">Nombre de usuari@</label>
-            <input class="in" type="text" id="name" name="name" placeholder = "Escribí tu nombre">
+            <label for="name">Em@il</label>
+            <input class="in" type="text" name="email" placeholder = "Escribí tu nombre">
+            <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                    <%= errors.email.msg %>
+                </div>
+            <% } %>
         </div>
                     
         <div class="in">

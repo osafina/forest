@@ -20,6 +20,7 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 const usersControllers = require('../controllers/usersControllers');
+const { processLogin } = require('../controllers/usersControllers');
 
 const validateCreateForm = [
     body('name').notEmpty().withMessage('Completar nombre.'),
@@ -39,6 +40,7 @@ router.get("/",usersControllers.index); //solo vista adm
 
 
 router.post('/register',uploadFile.single('imagen'), usersControllers.processregister);
+router.post('/login',usersControllers.processLogin);
 
 
 
