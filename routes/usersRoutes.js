@@ -26,6 +26,9 @@ const validateCreateForm = [
     body('name').notEmpty().withMessage('Completar nombre.'),
     body('nameU').notEmpty().withMessage('Completar apellido.'),
     body('email').isEmail().withMessage('Ingresar mail válido.'),
+    body('date').notEmpty().withMessage('Completar fecha.'),
+    body('adress').notEmpty().withMessage('Completar dirección.'),
+    body('contrasenia').notEmpty().withMessage('Completar contraseña.'),
 ]
 
 const validatelogin = [
