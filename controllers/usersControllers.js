@@ -21,20 +21,18 @@ const usersControllers = {
     processregister: (req,res)=> {
         const resultValidation = validationResult(req);
 
+//si su longitud es mayor a 0, si hay errores, voy a renderizar la vista nuevamente. 
         if(resultValidation.errors.length > 0) {
             return res.render('register',{
+//mapped convierte el array en un objeto literal.
                 errors: resultValidation.mapped(),
                 oldData:req.body});
         }
-
         let unserInDB= User.findByField('email',req.body.email);
 
         if (unserInDB){
             return res.render('register',{
-                errors: {
-                    email: {
-                        msg: 'este email ya se this.registro'}
-                },
+                errors: resultValidation.mapped(),
                 oldData:req.body});
         }
 

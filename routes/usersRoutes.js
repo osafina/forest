@@ -42,7 +42,7 @@ router.get("/register", usersControllers.registro);
 router.get("/",usersControllers.index); //solo vista adm
 
 
-router.post('/register',uploadFile.single('imagen'), usersControllers.processregister);
+router.post('/register',uploadFile.single('imagen'), validateCreateForm, usersControllers.processregister);
 router.post('/login',usersControllers.processLogin);
 
 

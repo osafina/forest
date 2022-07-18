@@ -28,35 +28,36 @@
     </div>
         
         <div class="REGISTRARME">
-            
             <form class="register" action="/users/register" method="post" enctype="multipart/form-data">
-
-
-                <h1>REGISTRO DEL USUARIO</h1>
-               <% if (locals && locals.mensajesDeError){ %> 
-                <% for (let error in mensajesDeError) { %> 
-                    <p><%= mensajesDeError[error].msj %> </p>
+                
+                
+                <h1>REGISTRO DEL USUARIO
+                                
+            <% if (locals && locals.errors){ %> 
+                <% for (let oneError in errors) { %> 
+                    <p><%= errors[oneError].msj %> </p>
                     <% } %> 
                     <% } %> 
+                </h1>
                 <div>
                     <label for="name">Nombre y Apellido:</label>
-                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre" required>
+                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre" value="">
                 </div>
                 <div>
                     <label for="name">Nombre de usuari@</label>
-                    <input type="text" id="nameU" name="nameU" placeholder = "Escribí tu nombre de usuario" required>
+                    <input type="text" id="nameU" name="nameU" placeholder = "Escribí tu nombre de usuario" >
                 </div>
                 <div>
                     <label for="email">e-mail:</label>
-                    <input type="email" name="email" id="email" placeholder = "Escribí tu mail" required>
+                    <input type="email" name="email" id="email" placeholder = "Escribí tu mail" >
                 </div>
                 <div>
                     <label for="name">Fecha de nacimiento</label>
-                    <input type="date" id="date" name="date" required>
+                    <input type="date" id="date" name="date" >
                 </div>
                 <div>
                     <label for="name">Domicilio </label>
-                    <input type="text" id="adress" name="adress" placeholder = "Escribí tu domicilio" required>
+                    <input type="text" id="adress" name="adress" placeholder = "Escribí tu domicilio">
                 </div>
                 <div>
                     <label>
@@ -87,13 +88,13 @@
                 <div class="registerBox">
                     <label>
                         Contraseña
-                        <input type="password" name="contrasenia" value="" placeholder = "Contraseña" required>
+                        <input type="password" name="contrasenia" value="" placeholder = "Contraseña" >
                     </label>
                 </div>
                 <div class="registerBox">
                     <label>
                         Confirmar contraseña
-                        <input type="password" type="pattern" name="confirmar" value="" placeholder = "Confirma tu contraseña" required>
+                        <input type="password" type="pattern" name="confirmar" value="" placeholder = "Confirma tu contraseña" >
                     </label>
                 </div>
 
