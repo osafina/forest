@@ -33,23 +33,28 @@
                 
                 <h1>REGISTRO DEL USUARIO
                                 
-            <% if (locals && locals.errors){ %> 
-                <% for (let oneError in errors) { %> 
-                    <p><%= errors[oneError].msg %> </p>
-                    <% } %> 
-                    <% } %> 
+        
                 </h1>
                 <div>
                     <label for="name">Nombre y Apellido:</label>
                     <input type="text" id="name" name="name" placeholder = "Escribí tu nombre" value="">
+                    <% if (locals.errors && locals.errors.name){ %> 
+                            <p class="text-danger"><%= errors.name.msg %> </p>
+                            <% } %> 
                 </div>
                 <div>
                     <label for="name">Nombre de usuari@</label>
                     <input type="text" id="nameU" name="nameU" placeholder = "Escribí tu nombre de usuario" >
                 </div>
+                <% if (locals.errors && locals.errors.nameU){ %> 
+                    <p class="text-danger"><%= errors.nameU.msg %> </p>
+                    <% } %> 
                 <div>
                     <label for="email">e-mail:</label>
                     <input type="email" name="email" id="email" placeholder = "Escribí tu mail" >
+                    <% if (locals.errors && locals.errors.email){ %> 
+                        <p class="text-danger"><%= errors.email.msg %> </p>
+                        <% } %> 
                 </div>
                 <div>
                     <label for="name">Fecha de nacimiento</label>
@@ -58,6 +63,9 @@
                 <div>
                     <label for="name">Domicilio </label>
                     <input type="text" id="adress" name="adress" placeholder = "Escribí tu domicilio">
+                    <% if (locals.errors && locals.errors.adress){ %> 
+                        <p class="text-danger"><%= errors.adress.msg %> </p>
+                        <% } %> 
                 </div>
                 <div>
                     <label>
@@ -89,12 +97,18 @@
                     <label>
                         Contraseña
                         <input type="password" name="contrasenia" value="" placeholder = "Contraseña" >
+                        <% if (locals.errors && locals.errors.contrasenia){ %> 
+                            <p class="text-danger"><%= errors.contrasenia.msg %> </p>
+                            <% } %> 
                     </label>
                 </div>
                 <div class="registerBox">
                     <label>
                         Confirmar contraseña
                         <input type="password" type="pattern" name="confirmar" value="" placeholder = "Confirma tu contraseña" >
+                        <% if (locals.errors && locals.errors.confirmar){ %> 
+                            <p class="text-danger"><%= errors.confirmar.msg %> </p>
+                            <% } %> 
                     </label>
                 </div>
 

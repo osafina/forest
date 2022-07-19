@@ -421,6 +421,14 @@ strong {
     justify-content: center;
 
 }
+
+.text-danger {
+    font-size: 15px;
+    color:#a05959;
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+}
  
 /* BOTON PARA TODO*/
 .btnRegister {
