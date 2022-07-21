@@ -39,6 +39,8 @@ const usersControllers = {
 
         let userToCreate = {
             ...req.body,
+            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
+            confirmar: bcryptjs.hashSync(req.body.contrasenia, 10),
             imagen:req.file
             
         }

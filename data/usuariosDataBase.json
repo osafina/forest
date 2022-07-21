@@ -199,5 +199,48 @@
   "imagen": "26586_341568111061_565791061_4734649_5140947_n.jpg",
   "contrasenia": "contrasenia",
   "confirmar": "confirmar"
+ },
+ {
+  "id": 23,
+  "name": "Federico",
+  "nameU": "Federico",
+  "email": "fedefmartinez@gmail.com",
+  "date": "1985-11-11",
+  "adress": "123",
+  "envio": "Mar del Plata",
+  "contrasenia": "1996",
+  "confirmar": "1996",
+  "password": "$2a$10$PJ0zyEMm8UkkLbIihlNW.OG6lIS/XftW/7/6J.aFO12oKcInQZTq2",
+  "imagen": {
+   "fieldname": "imagen",
+   "originalname": "PhotoRoom-20220219_145648.png",
+   "encoding": "7bit",
+   "mimetype": "image/png",
+   "destination": "./public/images/avatar",
+   "filename": "1658433043324_img.png",
+   "path": "public\\images\\avatar\\1658433043324_img.png",
+   "size": 2807908
+  }
+ },
+ {
+  "id": 24,
+  "name": " 123",
+  "nameU": "123",
+  "email": "123@123.com",
+  "date": "2222-02-12",
+  "adress": "213123",
+  "envio": "Balcarce",
+  "contrasenia": "$2a$10$E0LlIdY2zZJn7cdJVAHzT.oAElzYnhSBCsa6gDaw78mvDAY0Jawfi",
+  "confirmar": "$2a$10$E1kaLQVUqp6UG6g2LtQRPODW5Cjp/tMJA6xKXAN9893pWlNQbxFMy",
+  "imagen": {
+   "fieldname": "imagen",
+   "originalname": "IMG_7756-scaled-removebg-preview.png",
+   "encoding": "7bit",
+   "mimetype": "image/png",
+   "destination": "./public/images/avatar",
+   "filename": "1658433237451_img.png",
+   "path": "public\\images\\avatar\\1658433237451_img.png",
+   "size": 195205
+  }
  }
 ]
