@@ -25,10 +25,28 @@ const { processLogin } = require('../controllers/usersControllers');
 const validateCreateForm = [
     body('name').notEmpty().withMessage('Completar nombre.'),
     body('nameU').notEmpty().withMessage('Completar apellido.'),
-    body('email').isEmail().withMessage('Ingresar mail válido.'),
+    body('email').isEmail().withMessage('Formato de email incorrecto'), 
     body('date').notEmpty().withMessage('Completar fecha.'),
     body('adress').notEmpty().withMessage('Completar dirección.'),
     body('contrasenia').notEmpty().withMessage('Completar contraseña.'),
+    body('imagen').custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExt = ['.jpg', '.png', '.gif'];
+        if(!file) {
+            throw new Error ('Tenes que subir una imagen.')
+        } 
+        
+            else {
+                let fileExt = file.originalname;
+
+                if (!acceptedExt.includes(path.extname(fileExt))) {
+                   throw new Error (`Las extensiones permitidas de archivos son ${fileExt.join(', ')}`);
+                }
+
+        }
+
+        return true 
+    })
 ]
 
 const validatelogin = [

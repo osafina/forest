@@ -26,7 +26,8 @@ const usersControllers = {
             return res.render('register',{
 //mapped convierte el array en un objeto literal.
                 errors: resultValidation.mapped(),
-                oldData:req.body});
+//esta propiedad almacena todo lo qe viene en el require del body.
+                oldData: req.body});
         }
         let unserInDB= User.findByField('email',req.body.email);
 

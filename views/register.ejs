@@ -37,7 +37,12 @@
                 </h1>
                 <div>
                     <label for="name">Nombre y Apellido:</label>
-                    <input type="text" id="name" name="name" placeholder = "Escribí tu nombre" value="">
+                    <input 
+                        type="text" id="name" 
+                        name="name" 
+                        placeholder = "Escribí tu nombre" 
+                        value="<% locals.oldData ? oldData.name : null %> ">
+
                     <% if (locals.errors && locals.errors.name){ %> 
                             <p class="text-danger"><%= errors.name.msg %> </p>
                             <% } %> 
@@ -90,7 +95,10 @@
                 <div class="registerBox">
                     <label>
                         Foto de usuario
-                        <input type="file" id = "imagen" name="imagen" value="Foto de Usuario">
+                        <input type="file" id = "imagen" name="imagen" value="">
+                        <% if (locals.errors && locals.errors.imagen){ %> 
+                            <p class="text-danger"><%= errors.imagen.msg %> </p>
+                            <% } %>
                     </label>
                 </div>
                 <div class="registerBox">
