@@ -3,6 +3,7 @@ const router = express.Router();
 
 const multer = require('multer');
 const path = require('path');
+const guestMiddleware = require('../middleware/guestMiddleware/guestMiddleware')
 
 const { body, check } = require('express-validator');
 
@@ -54,8 +55,9 @@ const validatelogin = [
     check('password').isLength({min:8}).withMessage('la contraseña debe tener al menos 8 caracteres')
 ]
 
-router.get ("/login", usersControllers.ingreso);
-router.get("/register", usersControllers.registro);
+router.get ("/login", guestMiddleware, usersControllers.ingreso);
+router.get("/register", guestMiddleware, usersControllers.registro);
+router.get('/logout', usersControllers.logout),
 
 router.get("/",usersControllers.index); //solo vista adm
 

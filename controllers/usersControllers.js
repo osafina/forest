@@ -1,6 +1,7 @@
 const path = require ('path');
 const fs = require('fs');
 const bcryptjs = require('bcryptjs');
+const session = require('express-session')
 
 
 
@@ -29,13 +30,18 @@ const usersControllers = {
 //esta propiedad almacena todo lo qe viene en el require del body.
                 oldData: req.body});
         }
-        let unserInDB= User.findByField('email',req.body.email);
+//buscamos usuario que coincida con el email usando el modelo.
+        let userInDB= User.findByField('email', req.body.email);
 
-        if (unserInDB){
-            return res.render('register',{
-                errors: resultValidation.mapped(),
-                oldData:req.body});
-        }
+//revisar validación de si el main ya está registrado      
+         if (userInDB){
+            return res.render('register',{ 
+            errors: {msg:
+            'Este mail ha sido registrado'}, 
+            oldData: req.body
+        },
+         );
+         }
 
         let userToCreate = {
             ...req.body,
@@ -47,25 +53,31 @@ const usersControllers = {
 
         let userCreated = User.create(userToCreate);
 
-        return res.redirect('home');
+        return res.redirect('login');
     },
 
     processLogin : (req,res) => {
         
     let userToLogin = User.findByField('email', req.body.email);
+
 		
     if(userToLogin) {
-        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.contrasenia);
+        
         if (isOkThePassword) {
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
+//Borramos la propiedad password por seguridad
+            delete userToLogin.password
+//Guardamos en la propiedad userLogged al usuario que se logió.
+        req.session.userLogged = userToLogin
 
-            if(req.body.remember_user) {
-                res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
-            }
-            console.log('entroo');
-            return res.redirect('home');
-        } 
+        if (req.body.remember_user) {
+            res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 5})
+        }
+
+           res.redirect ('..');
+        }; 
+
+//Si no encuentro UserToLogin
         return res.render('login', {
             errors: {
                 email: {
@@ -96,6 +108,12 @@ const usersControllers = {
         res.render('usuarios',{usuarios: usuarios});
         
     },
+    
+    logout: (req, res) => {
+        res.clearCookie('email');
+        req.session.destroy();
+        res.redirect('/')
+    } ,
 
 }
 

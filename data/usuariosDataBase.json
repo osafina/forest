@@ -242,5 +242,26 @@
    "path": "public\\images\\avatar\\1658433237451_img.png",
    "size": 195205
   }
+ },
+ {
+  "id": 25,
+  "name": " Federico Martinez",
+  "nameU": "Federico Martínez Domínguez",
+  "email": "fedefmartinez@hotmail.com",
+  "date": "1994-04-18",
+  "adress": "15 142",
+  "envio": "Mar del Plata",
+  "contrasenia": "$2a$10$tTXr69Z7ApBsp3t5rPaXKesZX3KbfjVJqPen9s71UifFqcQd9rb.K",
+  "confirmar": "$2a$10$cWoDNCXf4yp2K6hIcRKQ6.Cu97YK0VC34X4sTkVROaZNZjgHZXRxi",
+  "imagen": {
+   "fieldname": "imagen",
+   "originalname": "photo5154809896460462415.jpg",
+   "encoding": "7bit",
+   "mimetype": "image/jpeg",
+   "destination": "./public/images/avatar",
+   "filename": "1658451531766_img.jpg",
+   "path": "public\\images\\avatar\\1658451531766_img.jpg",
+   "size": 12181
+  }
  }
 ]
