@@ -27,5 +27,6 @@ router.delete ('/eliminar/:id/', productsControllers.eliminar)
 
 
 
+
 router.get('/:id/',productsControllers.detalle)
 module.exports = router;

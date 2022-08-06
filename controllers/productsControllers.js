@@ -1,24 +1,24 @@
 const path = require('path');
 const fs = require('fs');
-const multer = require('multer')
-const { strictEqual } = require('assert');
-const { stringify } = require('querystring');
-const { callbackify } = require('util');
+const db = require('../database/models')
 
 const productosFilePath = path.join(__dirname, '../data/productosDataBase.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 
 const productsControllers = {
-
-
     carrito: (req, res, next) => {
 
         res.render('carrito')
     },
 
     index: (req, res) => {
-        res.render('index', { productos: productos });
+        //llamamos a db seguido del alias del modelo.
+        db.Products.findAll()
+        .then(function(products){
+
+            res.render('index', { productos: productos });
+        })
     },
 
     create: (req, res, next) => {
