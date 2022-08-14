@@ -9,9 +9,6 @@ const { validationResult }=require('express-validator');
 
 const User = require('../models/Users');
 
-const usuariosFilePath = path.join(__dirname,'../data/usuariosDataBase.json');
-const usuarios = JSON.parse(fs.readFileSync(usuariosFilePath, 'utf-8'));
-
 
 const usersControllers = {
 

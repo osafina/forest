@@ -30,8 +30,6 @@ const productsControllers = {
         
         let newProducts = productos.filter(productos => productos.id != idParams)
         
-        let productoJSON = JSON.stringify(newProducts)
-        fs.writeFileSync(productosFilePath, productoJSON)
         res.redirect('/products')
         
 
@@ -39,18 +37,18 @@ const productsControllers = {
 
     store: (req, res) => {
         if (req.file) {
-        let productonew = {
+    db.Products.create ({
             id: productos.length + 1,
             name: req.body.name,
             price: req.body.price,
+            type: req.body.tipo,
+            color: req.body.color,
             imagen: req.body.imagen,
             description: req.body.description,
 
-        }
+        })
 
         productos.push(productonew);
-        let productoJSON = JSON.stringify(productos);
-        fs.writeFileSync(productosFilePath, productoJSON);
 
         res.redirect('/products');
     } else { res.send('No adjunto la imgaen')}},

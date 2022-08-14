@@ -1,7 +1,7 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": "digitalhouse",
+    "password": null,
     "database": "forest_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

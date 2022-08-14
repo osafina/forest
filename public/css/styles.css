@@ -754,6 +754,104 @@ font-size: 25px;
         z-index: 2; 
     
     }
+
+    /* Nav Bar */
+
+   .barConteriner{
+        margin: 0;
+        padding: 0;
+      }
+      .barConteriner html {
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+      }
+      body .barConteriner {
+        background: #d1d1d1;
+      }
+      .barConteriner .checkbox {
+        display: none;
+      }
+      .barConteriner header {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+      }
+      .barConteriner .header-container {
+        width: 90%;
+        position: relative;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .barConteriner .header-logo {
+        width: 3rem;
+      }
+      .barConteriner .btn-label {
+        width: 2rem;
+        height: 1.4rem;
+      }
+      .barConteriner .header-button {
+        width: 2rem;
+        height: 0.2rem;
+        background: #000;
+        position: absolute;
+        top: 1.9rem;  
+        transition: all 0.2s;
+      }
+      .barConteriner .header-button::before,
+      .barConteriner .header-button::after {
+        content: "";
+        width: 2rem;
+        height: 0.2rem;
+        background: #000;
+        position: absolute;
+        top: -0.6rem;
+        transition: all 0.2s;
+      }
+      .barConteriner .header-button::after {
+        top: 0.6rem;
+      }
+      .barConteriner .menu {
+        background: #d1d1d1;
+        width: 100%;
+        height: 10rem;
+        position: fixed;
+        z-index: 9;
+        top: -12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding-top: 2rem;
+        transition: all 0.5s;
+      }
+      .barConteriner ul {
+        list-style: none;
+      }
+      .barConteriner li {
+        margin: 0.5rem;
+      }
+      .barConteriner a {
+        margin: 0 1rem;
+        color: #000;
+        text-decoration: none;
+      }
+      .barConteriner .checkbox:checked ~ .menu {
+        background: #fff;
+        top: 0rem;
+      }
+      .barConteriner .checkbox:checked + header .header-container label .header-button {
+        background: none;
+      }
+      .barConteriner .checkbox:checked + header .header-container label .header-button::before {
+        transform: rotate(35deg);
+        top: 0;
+      }
+      .barConteriner .checkbox:checked + header .header-container label .header-button::after {
+        transform: rotate(-35deg);
+        top: 0;
+      }
 }
 
 
