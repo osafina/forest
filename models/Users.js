@@ -17,13 +17,13 @@ generateId: function (){
 }
 ,
 findByField : function (field, text){
-    let allUsers = this.findAll();
+    let allUsers = findAll();
     let userFound = allUsers.find( oneUser => oneUser[field] === text);
     return userFound
 
 },
 create: function (userData){
-    let allUsers = this.findAll();
+    let allUsers = findAll();
     let newUser = {
         id: this.generateId(),
                 ...userData
@@ -32,7 +32,7 @@ create: function (userData){
     return newUser
 },
 delete: function(id){
-    let allUsers = this.findAll();
+    let allUsers = findAll();
     let finalUsers = allUsers.filter(oneUser => oneUser !== id);
     allUsers.push(newUser);
     
