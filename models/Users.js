@@ -1,5 +1,6 @@
 const { name } = require('ejs');
 const fs = require('fs');
+const Sequelize = require('sequelize');
 const path = require ('path');
 const { all } = require('../routes/mainRoutes');
 
