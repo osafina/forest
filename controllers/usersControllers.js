@@ -88,7 +88,8 @@ const usersControllers = {
                             }
 
                             res.redirect('..');
-                        };
+                        }}})
+                        .catch(err => res.send(err));
                         //Si no encuentro UserToLogin
                         return res.render('login', {
                             errors: {
