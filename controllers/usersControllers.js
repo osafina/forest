@@ -71,7 +71,7 @@ const usersControllers = {
         const resultValidation = validationResult(req);
 
         //si su longitud es mayor a 0, si hay errores, voy a renderizar la vista nuevamente. 
-        if (resultValidation.errors.length > 0) {
+        if (resultValidation.errors.length == 0) {
             let userToLogin = User.findOne({ where: { email: req.body.email } })
                 .then(user => {
                     if (userToLogin) {
@@ -90,7 +90,7 @@ const usersControllers = {
                             res.redirect('..');
                         }}})
                         .catch(err => res.send(err));
-                        //Si no encuentro UserToLogin
+                    } else {//Si no encuentro UserToLogin
                         return res.render('login', {
                             errors: {
                                 email: {
@@ -99,19 +99,8 @@ const usersControllers = {
                             }
 
                         });
-                    }
-
-                    return res.render('login', {
-                        errors: {
-                            email: {
-                                msg: 'No se encuentra este email en nuestra base de datos'
-                            }
-                        }
-
-                    });
-                })
-        }
-    },
+                }
+            },
     
     logout: (req, res) => {
         res.clearCookie('email');
