@@ -14,7 +14,8 @@
 
     }
     let config = {
-        tableName: 'sites'
+        tableName: 'sites',
+        timestamp: false 
     }
     //Asocio tabla brands con la tabla products
     const Site = sequelize.define(alias,cols,config)

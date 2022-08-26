@@ -14,7 +14,8 @@ module.exports = (sequelize,DataTypes) =>{
         
     }
     let config = {
-        tableName: 'types'
+        tableName: 'types',
+        timestamp: false 
     }
     //Asocio tabla colors con la tabla products
     const Type = sequelize.define(alias,cols,config)

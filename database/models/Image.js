@@ -18,7 +18,8 @@
         }
     }
     let config = {
-        tableName:'images'
+        tableName:'images',
+        timestamp: false 
     };
     const Image = sequelize.define(alias,cols,config)
     Image.associate = function(models){

@@ -18,7 +18,8 @@ module.exports = (sequelize,DataTypes) =>{
        
     }
     let config = {
-        tableName:'imageProduct'
+        tableName:'imageProduct',
+        timestamp: false 
     }
     //Asocio tabla brands con la tabla products
     const ImageProduct = sequelize.define(alias,cols,config)

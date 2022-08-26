@@ -88,7 +88,7 @@ const usersControllers = {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })
                             }
 
-                            res.redirect('../../');
+                            res.redirect('../');
                         }}})
                         .catch(err => res.send(err));
                     } else {//Si no encuentro UserToLogin

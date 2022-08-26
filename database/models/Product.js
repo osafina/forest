@@ -29,7 +29,8 @@ let alias = "Product"
         }
     }
     let config= {
-       tableName:"products"  
+       tableName:"products",
+       timestamp: false   
    }
  
     let Product= sequelize.define(alias, cols, config)
