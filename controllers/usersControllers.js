@@ -72,7 +72,8 @@ const usersControllers = {
 
         //si su longitud es mayor a 0, si hay errores, voy a renderizar la vista nuevamente. 
         if (resultValidation.errors.length == 0) {
-            let userToLogin = User.findOne({ where: { email: req.body.email } })
+            //let userToLogin = User.findOne({ where: { email: req.body.email } })
+            let userToLogin = User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
                 .then(user => {
                     if (userToLogin) {
                         let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.contrasenia);
@@ -87,7 +88,7 @@ const usersControllers = {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })
                             }
 
-                            res.redirect('..');
+                            res.redirect('../../');
                         }}})
                         .catch(err => res.send(err));
                     } else {//Si no encuentro UserToLogin

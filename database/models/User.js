@@ -25,10 +25,6 @@ module.exports = (sequelize, DataTypes)=>{
             allowNull:false,
             unique:true
         },
-        dni:{
-            type: DataTypes.STRING,
-            unique:true
-        },
         password:{
             type: DataTypes.STRING,
             allowNull:false
@@ -38,7 +34,8 @@ module.exports = (sequelize, DataTypes)=>{
 
     }
     let config= {
-       tableName:"users"  
+       tableName:"users" ,
+       timestamp: false 
    }
  
     let User= sequelize.define(alias, cols, config);
