@@ -15,7 +15,7 @@ let alias = "Product"
             type: DataTypes.STRING,
             allowNull:false, 
         },
-        brandId: {
+        siteId: {
             type: DataTypes.INTEGER,
             allowNull:false
         },
