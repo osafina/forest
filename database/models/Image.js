@@ -13,7 +13,7 @@
         },
     }
     let config = {
-        tableName:'images',
+        tableName:'image',
         timestamp: false 
     };
     const Image = sequelize.define(alias,cols,config)

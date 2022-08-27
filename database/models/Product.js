@@ -29,7 +29,7 @@ let alias = "Product"
         }
     }
     let config= {
-       tableName:"products",
+       tableName:"product",
        timestamp: false   
    }
  
@@ -37,6 +37,7 @@ let alias = "Product"
 
     Product.associate=function(models){
         Product.belongsTo(models.Type,{
+            //definimos como llamamos esa relación. Buena práctica en minuscula y plural.
             as:"type",
             foreingKey:"typeId"
         })

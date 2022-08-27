@@ -14,7 +14,7 @@
 
     }
     let config = {
-        tableName: 'sites',
+        tableName: 'site',
         timestamp: false 
     }
     //Asocio tabla brands con la tabla products

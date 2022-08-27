@@ -52,7 +52,8 @@ const validateCreateForm = [
 
 const validatelogin = [
     check('email').isEmail(),
-    check('password').isLength({min:8}).withMessage('la contraseña debe tener al menos 8 caracteres')
+    check('password').isEmpty(),
+    //isLength({min:8}).withMessage('la contraseña debe tener al menos 8 caracteres')
 ]
 
 router.get ("/login", guestMiddleware, usersControllers.ingreso);
