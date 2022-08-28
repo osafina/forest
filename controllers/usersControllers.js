@@ -69,7 +69,7 @@ const usersControllers = {
             let userToLogin = User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
                 .then(user => {
                     if (userToLogin) {
-                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.contrasenia);
+                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
                         if (isOkThePassword) {
                             //Borramos la propiedad password por seguridad
