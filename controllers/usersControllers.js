@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models')
-const bcrypt = require('bcryptjs');
+const bcryptjs = require('bcryptjs');
 const multer = require('multer');
 const User = db.User;
 
@@ -66,12 +66,13 @@ const usersControllers = {
         //si su longitud es mayor a 0, si hay errores, voy a renderizar la vista nuevamente. 
         if (resultValidation.errors.length == 0) {
             //let userToLogin = User.findOne({ where: { email: req.body.email } })
-            let userToLogin = User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
-                .then(user => {
+            User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
+                .then(userToLogin => {
                     if (userToLogin) {
-                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                        let isOkThePassword = req.body.password
 
-                        if (isOkThePassword) {
+                        if (isOkThePassword == userToLogin.password) {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.
@@ -80,7 +81,7 @@ const usersControllers = {
                             if (req.body.remember_user) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })
                             }
-                            res.redirect('..');
+                            res.redirect('/');
                         }
                     }
                 })
