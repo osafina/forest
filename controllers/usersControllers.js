@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models')
 const bcryptjs = require('bcryptjs');
-const multer = require('multer');
 const User = db.User;
 
 
@@ -31,25 +30,23 @@ const usersControllers = {
         const resultValidation = validationResult(req);
 
         //si su longitud es mayor a 0, si hay errores, voy a renderizar la vista nuevamente. 
-        if (resultValidation.errors.length == 0) {
-            //buscamos usuario que coincida con el email usando el modelo.
-            let userInDB = User.findOne({ where: { email: req.body.email } })
+        if (resultValidation.errors.length == 0 && req.body.password == req.body.confirmar) {
                 //revisar validación de si el main ya está registrado
-                .then(user => {
-                    if (userInDB.isEmpty()) {
                         let userToCreate = {
                             ...req.body,
-                            contrasenia: bcryptjs.hashSync(req.body.contrasenia, 10),
-                            confirmar: bcryptjs.hashSync(req.body.contrasenia, 10),
+                            name: req.body.name,
+                            email: req.body.email,
+                            password: bcryptjs.hashSync(req.body.password, 10),
+                            
                             imagen: req.file
                         }
-                        User.create(userToCreate)
-                    }
-                })
+                    
+                
+                User.create(userToCreate)
                 .then(() => res.redirect("/login"))
                 .catch(err => res.send(err));
 
-        }else{
+        } else {
             return res.render('register', {
                 errors: {
                     msg:
@@ -69,10 +66,9 @@ const usersControllers = {
             User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
                 .then(userToLogin => {
                     if (userToLogin) {
-                        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
-                        let isOkThePassword = req.body.password
-
-                        if (isOkThePassword == userToLogin.password) {
+                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                        
+                        if (isOkThePassword) {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.

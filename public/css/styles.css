@@ -860,7 +860,7 @@ font-size: 25px;
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   z-index: 100;
-  position: fixed; /* Set the navbar to fixed position */
+  position: relative; /* Set the navbar to fixed position */
   top: 10px; /* Position the navbar at the top of the page */
   width: 95vw; /* Full width */
   height: 7vh;
