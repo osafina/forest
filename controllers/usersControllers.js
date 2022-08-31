@@ -38,10 +38,10 @@ const usersControllers = {
                             email: req.body.email,
                             password: bcryptjs.hashSync(req.body.password, 10),
                             
-                            imagen: req.file
+                            image: req.file.fieldname
                         }
                     
-                
+                console.log(userToCreate);
                 User.create(userToCreate)
                 .then(() => res.redirect("/login"))
                 .catch(err => res.send(err));

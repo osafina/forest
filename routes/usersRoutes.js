@@ -30,7 +30,7 @@ const validateCreateForm = [
     body('date').notEmpty().withMessage('Completar fecha.'),
     body('adress').notEmpty().withMessage('Completar dirección.'),
     body('contrasenia').notEmpty().withMessage('Completar contraseña.'),
-    body('imagen').custom((value, { req }) => {
+    body('image').custom((value, { req }) => {
         let file = req.file;
         let acceptedExt = ['.jpg', '.png', '.gif'];
         if(!file) {
@@ -63,7 +63,7 @@ router.get('/logout', usersControllers.logout),
 router.get("/",usersControllers.index); //solo vista adm
 
 
-router.post('/register',uploadFile.single('imagen'), validateCreateForm, usersControllers.processregister);
+router.post('/register',uploadFile.single('image'), validateCreateForm, usersControllers.processregister);
 router.post('/login',usersControllers.processLogin);
 
 

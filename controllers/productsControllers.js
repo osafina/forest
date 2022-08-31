@@ -21,15 +21,7 @@ const productsControllers = {
         res.render('crearProducto');
     },
 
-    eliminar: function (req, res) {
-		const idParams = req.params.id;
-
-		Movies.findByPk(idParams)
-		.then((product) => {
-			return res.render("moviesDelete", { Products: product });
-		})
-		.catch((error) => console.log(error));
-	},
+    
 
     store: (req, res) => {
         if (req.file) {
