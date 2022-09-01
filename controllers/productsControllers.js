@@ -1,6 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const db = require('../database/models')
+const db = require('../database/models');
+const products = db.Product;
 
 const productsControllers = {
     carrito: (req, res) => {
@@ -25,7 +26,7 @@ const productsControllers = {
 
     store: (req, res) => {
         if (req.file) {
-    db.Products.create.then (() =>({
+    products.create.then (() =>({
             id: productos.length + 1,
             name: req.body.name,
             price: req.body.price,

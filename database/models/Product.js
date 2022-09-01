@@ -29,7 +29,7 @@ let alias = "Product"
         }
     }
     let config= {
-       tableName:"product",
+       tableName:"products",
        timestamp: false   
    }
  
