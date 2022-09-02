@@ -42,11 +42,12 @@ const usersControllers = {
                         }
                     
                 console.log(userToCreate);
-                User.create(userToCreate)
+                User.create(userToCreate,{attributes:{exclude:[`createdAt`,`updatedAt`]}})
                 .then(() => res.redirect("/login"))
                 .catch(err => res.send(err));
 
         } else {
+            console.log(resultValidation);
             return res.render('register', {
                 errors: {
                     msg:

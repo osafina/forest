@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes)=>{
             type:DataTypes.STRING, 
             allowNull:false
         },
-        telephone:{
-            type:DataTypes.INTEGER,
-            allowNull:false
-        },
         email:{
             type: DataTypes.STRING,
             allowNull:false,
@@ -33,7 +29,7 @@ module.exports = (sequelize, DataTypes)=>{
 
     }
     let config= {
-       tableName:"user" ,
+      // tableName:"user" ,
        timestamp: false 
    }
  

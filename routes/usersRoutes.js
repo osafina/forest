@@ -29,10 +29,10 @@ const validateCreateForm = [
     body('email').isEmail().withMessage('Formato de email incorrecto'), 
     body('date').notEmpty().withMessage('Completar fecha.'),
     body('adress').notEmpty().withMessage('Completar dirección.'),
-    body('contrasenia').notEmpty().withMessage('Completar contraseña.'),
+    body('confirmar').notEmpty().withMessage('Completar contraseña.'),
     body('image').custom((value, { req }) => {
         let file = req.file;
-        let acceptedExt = ['.jpg', '.png', '.gif'];
+    let acceptedExt = ['.jpg', '.png', '.gif'];
         if(!file) {
             throw new Error ('Tenes que subir una imagen.')
         } 
