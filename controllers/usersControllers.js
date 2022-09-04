@@ -38,16 +38,15 @@ const usersControllers = {
                             email: req.body.email,
                             password: bcryptjs.hashSync(req.body.password, 10),
                             
-                            image: req.file.fieldname
+                            image: req.file.originalname
                         }
                     
                 console.log(userToCreate);
-                User.create(userToCreate,{attributes:{exclude:[`createdAt`,`updatedAt`]}})
+                User.create(userToCreate)
                 .then(() => res.redirect("/login"))
                 .catch(err => res.send(err));
 
         } else {
-            console.log(resultValidation);
             return res.render('register', {
                 errors: {
                     msg:
@@ -67,9 +66,9 @@ const usersControllers = {
             User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
                 .then(userToLogin => {
                     if (userToLogin) {
-                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
                         
-                        if (isOkThePassword) {
+                        if (req.body.password == userToLogin.password) {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.
