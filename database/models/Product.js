@@ -9,27 +9,33 @@ let alias = "Product"
         },
         name:{
             type: DataTypes.STRING, 
-            allowNull:false
-        },
+                },
         description:{
             type: DataTypes.STRING,
-            allowNull:false, 
+            
         },
-        siteId: {
-            type: DataTypes.INTEGER,
-            allowNull:false
-        },
+        siteId: 
+            {
+            type: DataTypes.STRING,
+                },
         typeId:{
-            type: DataTypes.INTEGER,
-            allowNull:false
+            type: DataTypes.STRING,
+                },
+        stock:
+            {
+            type:DataTypes.INTEGER},
+        updatedAt: 
+            {
+            type:DataTypes.JSON
         },
-        stock:{
-            type:DataTypes.INTEGER,
-            allowNull:false
+        createdAt: 
+            {
+            type: DataTypes.JSON
         }
+                
     }
     let config= {
-       tableName:"products",
+       tableName:"product",
        timestamp: false   
    }
  

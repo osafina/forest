@@ -21,7 +21,6 @@ const storage = multer.diskStorage({
 const uploadFile = multer({storage});
 
 const usersControllers = require('../controllers/usersControllers');
-const { processLogin } = require('../controllers/usersControllers');
 
 const validateCreateForm = [
     body('name').notEmpty().withMessage('Completar nombre.'),

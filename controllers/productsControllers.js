@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
-const products = db.Product;
+const Product = db.Product;
 
 const productsControllers = {
     carrito: (req, res) => {
@@ -11,14 +11,14 @@ const productsControllers = {
 
     index: (req, res) => {
 
-        db.Products.findAll()
+        db.Product.findAll()
         .then(function(products){
 
             res.render('index', { products: productos });
         })
     },
 
-    create: (req, res, next) => {
+    create: (req, res) => {
         res.render('crearProducto');
     },
 
@@ -26,18 +26,19 @@ const productsControllers = {
 
     store: (req, res) => {
         if (req.file) {
-    products.create.then (() =>({
-            id: productos.length + 1,
+    let newProduct = {
+            ...req.body,
             name: req.body.name,
             price: req.body.price,
-            type: req.body.tipo,
-            site: req.body.site,
-            imagen: req.body.imagen,
+            typeId: req.body.typeId,
+            siteId: req.body.siteId,
+            imagen: req.file.originalname,
             description: req.body.description,
+            stock: req.body.stock          
+        }            
+        
+        Product.create(newProduct).then (() => res.redirect('../products'));
 
-        }));
-
-        res.redirect('/products');
     } else { res.send('No adjunto la imgaen')}},
 
     detalle: (req, res) => {
@@ -48,7 +49,7 @@ const productsControllers = {
 
     modificarProducto: (req, res) => {
         let idParams = req.params.id;
-        let productToEdit= db.Products.findByPK (idParams)
+        db.Products.findByPK (idParams)
         .then((productToEdit) => {
             res.render('modificarProducto', { productToEdit: productToEdit });
 

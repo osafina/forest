@@ -10,11 +10,9 @@ module.exports = (sequelize, DataTypes)=>{
         },
         name:{
             type: DataTypes.STRING ,
-            allowNull:false
         },
         adress:{
             type:DataTypes.STRING, 
-            allowNull:false
         },
         email:{
             type: DataTypes.STRING,
@@ -22,14 +20,18 @@ module.exports = (sequelize, DataTypes)=>{
         },
         password:{
             type: DataTypes.STRING,
-            allowNull:false
         },
         image: DataTypes.STRING,
         profile: DataTypes.INTEGER,
-
+        createdAt: {
+            type: DataTypes.STRING
+        },
+        updatedAt: {
+            type: DataTypes.STRING
+        }
     }
     let config= {
-      // tableName:"user" ,
+      tableName:"user" ,
        timestamp: false 
    }
  

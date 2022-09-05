@@ -41,7 +41,7 @@ const usersControllers = {
                             image: req.file.originalname
                         }
                     
-                console.log(userToCreate);
+                
                 User.create(userToCreate)
                 .then(() => res.redirect("/login"))
                 .catch(err => res.send(err));
@@ -72,7 +72,8 @@ const usersControllers = {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.
-                            req.session.userLogged = userToLogin
+                            req.session.userLogged = userToLogin;
+                            console.log(userToLogin)
 
                             if (req.body.remember_user) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })

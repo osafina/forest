@@ -8,20 +8,21 @@ const router = express.Router();
 router.get ("/", productsControllers.index);
 router.get("/carrito",productsControllers.carrito);
 
-let multerDiskStorage = multer.diskStorage ({
-    destination: (req, res, callback) => {
-        let folder = path.join (__dirname + '../public');
-        callback(null, folder);
+const storage = multer.diskStorage({
+    destination:(req,file,cb)=> {
+        cb(null,'./public/images/avatar');
     },
-    filename:  (req, res, callback) => {
-        let imageName= "producto" + Date.now + path.extname(file.originalname);
-        callback (null, imageName)
+    filename:(req,file,cb)=> {
+        
+        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+        cb(null,fileName);
     }
-})
-let fileUpload = multer ({storage: multerDiskStorage});
+});
+
+const uploadFile = multer({storage});
 
 router.get('/crearProducto',productsControllers.create);
-router.post('/',fileUpload.single('imagen'), productsControllers.store);
+router.post('/',uploadFile.single('imagen'), productsControllers.store);
 router.get('/modificarProducto/:id/', productsControllers.modificarProducto)
 router.put('/modificarProducto/:id/', productsControllers.update)
 // router.delete('/eliminar/:id/', productsControllers.eliminar)
