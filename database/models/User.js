@@ -24,10 +24,10 @@ module.exports = (sequelize, DataTypes)=>{
         image: DataTypes.STRING,
         profile: DataTypes.INTEGER,
         createdAt: {
-            type: DataTypes.STRING
+            type: DataTypes.JSON
         },
         updatedAt: {
-            type: DataTypes.STRING
+            type: DataTypes.JSON
         }
     }
     let config= {

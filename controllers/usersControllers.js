@@ -43,9 +43,9 @@ const usersControllers = {
                     
                 
                 User.create(userToCreate)
-                .then(() => res.redirect("/login"))
+                .then(() => res.redirect("../login"))
                 .catch(err => res.send(err));
-
+º
         } else {
             return res.render('register', {
                 errors: {

@@ -8,22 +8,29 @@ let alias = "Product"
             allowNull:false
         },
         name:{
-            type: DataTypes.STRING, 
+            type: DataTypes.STRING 
                 },
+        price:{
+            type: DataTypes.INTEGER
+        },
         description:{
-            type: DataTypes.STRING,
+            type: DataTypes.STRING
             
+        },
+        imageId: {
+            type: DataTypes.STRING
         },
         siteId: 
             {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING
                 },
         typeId:{
-            type: DataTypes.STRING,
+            type: DataTypes.STRING
                 },
         stock:
             {
-            type:DataTypes.INTEGER},
+            type:DataTypes.INTEGER
+        },
         updatedAt: 
             {
             type:DataTypes.JSON

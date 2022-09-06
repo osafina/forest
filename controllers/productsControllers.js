@@ -12,9 +12,9 @@ const productsControllers = {
     index: (req, res) => {
 
         db.Product.findAll()
-        .then(function(products){
+        .then(function(productos){
 
-            res.render('index', { products: productos });
+            res.render('index', { productos: productos });
         })
     },
 
