@@ -13,7 +13,7 @@
                 
         <div class="in">
             <label for="name">Em@il</label>
-            <input class="in" type="text" name="email" placeholder = "Escribí tu nombre">
+            <input class="in" id="email" type="text" name="email" placeholder = "Escribí tu mail">
             <% if (locals.errors && errors.email) { %>
                 <div class="text-danger">
                     <%= errors.email.msg %>
@@ -23,14 +23,14 @@
                     
         <div class="in">
             <label>Contraseña</label>
-            <input class="in" type="password" name="password" placeholder="Escribí tu contraseña">
+            <input class="in" type="password" id='pass' name="password" placeholder="Escribí tu contraseña">
         </div>
         <label>
           <input type="checkbox" name="remember_user">Recordar mi usuario
         </label>
         
         <div >
-            <button class="btnRegister" type ="submit">Enviar</button>
+            <button class="btnRegister" id="btnRegister" type ="submit">Enviar</button>
         </div>
         
 
@@ -40,10 +40,10 @@
     <div class="copyright">
          <h4>Copyright © 1999-2022 Forest Company.</h4>
     </div>
-    
+    <script src="/js/login.js"></script>
 </body>
     
-</html>
+</html> 
 
     
       

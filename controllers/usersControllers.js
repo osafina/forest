@@ -22,9 +22,13 @@ const usersControllers = {
     },
 
     index: (req, res) => {
-        res.render('usuarios', { usuarios: usuarios });
+        User.findAll()
+        .then(function(usuarios){
 
-    },
+            res.render(path.resolve(__dirname, '..', 'views','usuarios'), { usuarios});
+
+    })
+},
 
     processregister: (req, res) => {
         const resultValidation = validationResult(req);
@@ -43,9 +47,9 @@ const usersControllers = {
                     
                 
                 User.create(userToCreate)
-                .then(() => res.redirect("../login"))
+                .then(() => res.redirect("http://localhost:3030/users/login"))
                 .catch(err => res.send(err));
-º
+
         } else {
             return res.render('register', {
                 errors: {
@@ -66,9 +70,9 @@ const usersControllers = {
             User.findOne({ where: { email: req.body.email }, attributes: { exclude: ['createdAt', 'updatedAt'] }})
                 .then(userToLogin => {
                     if (userToLogin) {
-                        //let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+                        let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
                         
-                        if (req.body.password == userToLogin.password) {
+                        if (isOkThePassword) {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.
@@ -78,7 +82,7 @@ const usersControllers = {
                             if (req.body.remember_user) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })
                             }
-                            res.redirect('/');
+                            res.redirect('http://localhost:3030/');
                         }
                     }
                 })

@@ -29,19 +29,19 @@
         <div class="productoDetalle">
 
             <div class="imagenDetalle">
-                <h1><%= productoseleccionado.name %></h1>
-                <img src="/images/<%= productoseleccionado.imagen%>">
+                <h1><%= producto.name %></h1>
+                <img src="/images/<%= producto.imagen%>">
             </div>
 
             <div class="descripcionProducto">
-                <p> <%= productoseleccionado.description %>  </p>
-                <h2>$ <%=  productoseleccionado.price %>  </h2>
+                <p> <%= producto.description %>  </p>
+                <h2>$ <%=  producto.price %>  </h2>
                 <button class="btnRegister">Agregar al carrito</button>
             </div>
 
             <div>
-                <a href="/products/modificarProducto/<%= productoseleccionado.id %> " class="btnRegister">EDITAR PRODUCTO</a>
-				<form action="/products/eliminar/<%= productoseleccionado.id %>?_method=delete" method="post">
+                <a href="/products/modificarProducto/<%= producto.id %> " class="btnRegister">EDITAR PRODUCTO</a>
+				<form action="/products/eliminar/<%= producto.id %>?_method=delete" method="post">
 					<button type="submit" class="btnRegister">ELIMINAR</button>
 				</form>
             </div>

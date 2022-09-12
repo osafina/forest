@@ -8,38 +8,31 @@ let alias = "Product"
             allowNull:false
         },
         name:{
-            type: DataTypes.STRING 
+            type: DataTypes.STRING,
+          
                 },
         price:{
-            type: DataTypes.INTEGER
+            type: DataTypes.INTEGER,
+           
         },
         description:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING,
+          
             
         },
-        imageId: {
-            type: DataTypes.STRING
-        },
-        siteId: 
-            {
-            type: DataTypes.STRING
-                },
-        typeId:{
-            type: DataTypes.STRING
-                },
         stock:
             {
-            type:DataTypes.INTEGER
+            type:DataTypes.INTEGER,
+           
+        },
+        imagen: {
+            type: DataTypes.STRING,
+           
         },
         updatedAt: 
-            {
+            {     
             type:DataTypes.JSON
-        },
-        createdAt: 
-            {
-            type: DataTypes.JSON
-        }
-                
+        },   
     }
     let config= {
        tableName:"product",
@@ -48,7 +41,7 @@ let alias = "Product"
  
     let Product= sequelize.define(alias, cols, config)
 
-    Product.associate=function(models){
+   /* Product.associate=function(models){
         Product.belongsTo(models.Type,{
             //definimos como llamamos esa relación. Buena práctica en minuscula y plural.
             as:"type",
@@ -70,7 +63,7 @@ let alias = "Product"
             foreingKey:"productId",
             otherKey:"userId"
         })      
-    }
+    }*/
 return Product;
 }
 

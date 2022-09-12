@@ -2,6 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
+const Op = db.Sequelize.Op;
 
 const productsControllers = {
     carrito: (req, res) => {
@@ -11,7 +12,7 @@ const productsControllers = {
 
     index: (req, res) => {
 
-        db.Product.findAll()
+        Product.findAll()
         .then(function(productos){
 
             res.render('index', { productos: productos });
@@ -30,8 +31,6 @@ const productsControllers = {
             ...req.body,
             name: req.body.name,
             price: req.body.price,
-            typeId: req.body.typeId,
-            siteId: req.body.siteId,
             imagen: req.file.originalname,
             description: req.body.description,
             stock: req.body.stock          
@@ -42,14 +41,16 @@ const productsControllers = {
     } else { res.send('No adjunto la imgaen')}},
 
     detalle: (req, res) => {
-		db.Products.findByPk(req.params.id).then((producto) => {
+        let idParams = req.params.id;
+		Product.findByPk(idParams)
+        .then((producto) => {
 			res.render("detalleProducto.ejs", { producto });
 		});
 	},
 
     modificarProducto: (req, res) => {
         let idParams = req.params.id;
-        db.Products.findByPK (idParams)
+        Product.findByPk (idParams)
         .then((productToEdit) => {
             res.render('modificarProducto', { productToEdit: productToEdit });
 
@@ -64,7 +65,7 @@ const productsControllers = {
             description: req.body.description,
         }
 
-    Products.update( newProduct, {
+    Product.update( newProduct, {
         where: {
             id: idParams
         }
@@ -78,6 +79,15 @@ const productsControllers = {
 
 
     },
+    destroy: (req, res) => {
+		Product
+			.destroy({
+				where: {
+					id: req.params.id
+				}
+			})
+			.then(() => res.redirect('http://localhost:3030/products/'));
+	},
 
 };
 
