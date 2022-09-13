@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
-const db = require('../database/models')
 const bcryptjs = require('bcryptjs');
+const db = require('../database/models')
 const User = db.User;
 
 
@@ -72,12 +72,11 @@ const usersControllers = {
                     if (userToLogin) {
                         let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
                         
-                        if (isOkThePassword) {
+                        if (isOkThePassword != undefined) {
                             //Borramos la propiedad password por seguridad
                             delete userToLogin.password
                             //Guardamos en la propiedad userLogged al usuario que se logió.
                             req.session.userLogged = userToLogin;
-                            console.log(userToLogin)
 
                             if (req.body.remember_user) {
                                 res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 5 })
@@ -102,7 +101,8 @@ const usersControllers = {
     logout: (req, res) => {
         res.clearCookie('email');
         req.session.destroy();
-        res.redirect('..')
+        console.log(res.locals.isLogged)
+        res.redirect('../');
     },
 
 }
