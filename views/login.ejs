@@ -7,18 +7,18 @@
         
     <%- include ('partials/header') %>
 
-    <form class="login" action="/users/login" method ="POST" >
+    <form class="login" id = 'login' action="/users/login" method ="POST" >
         <a href="http://localhost:3030/"> <img src ="/images/logo.png" ></a>
         <h3>INGRESAR</h3>
                 
         <div class="in">
             <label for="name">Em@il</label>
             <input class="in" id="email" type="text" name="email" placeholder = "Escribí tu mail">
-            <% if (locals.errors && errors.email) { %>
+            
                 <div class="text-danger">
-                    <%= errors.email.msg %>
+                   
                 </div>
-            <% } %>
+           
         </div>
                     
         <div class="in">
@@ -40,7 +40,7 @@
     <div class="copyright">
          <h4>Copyright © 1999-2022 Forest Company.</h4>
     </div>
-    <script src="/js/login.js"></script>
+    <script type= 'text/javascript' src="/js/login.js"></script>
 </body>
     
 </html> 

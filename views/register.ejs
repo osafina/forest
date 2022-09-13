@@ -28,7 +28,7 @@
     </div>
         
         <div class="REGISTRARME">
-            <form class="register" action="/users/register" method="post" enctype="multipart/form-data">
+            <form class="register" id = 'register' action="/users/register" method="post" enctype="multipart/form-data">
                 
                 
                 <h1>REGISTRO DEL USUARIO
@@ -40,26 +40,17 @@
                     <input 
                         type="text" id="name" 
                         name="name" 
-                        placeholder = "Escribí tu nombre" 
-                        value="<% locals.oldData ? oldData.name : null %> ">
-
-                    <% if (locals.errors && locals.errors.name){ %> 
-                            <p class="text-danger"><%= errors.name.msg %> </p>
-                            <% } %> 
+                        placeholder = "Escribí tu nombre" >
                 </div>
                 <div>
                     <label for="name">Nombre de usuari@</label>
                     <input type="text" id="nameU" name="nameU" placeholder = "Escribí tu nombre de usuario" >
                 </div>
-                <% if (locals.errors && locals.errors.nameU){ %> 
-                    <p class="text-danger"><%= errors.nameU.msg %> </p>
-                    <% } %> 
+                
                 <div>
                     <label for="email">e-mail:</label>
                     <input type="email" name="email" id="email" placeholder = "Escribí tu mail" >
-                    <% if (locals.errors && locals.errors.email){ %> 
-                        <p class="text-danger"><%= errors.email.msg %> </p>
-                        <% } %> 
+                    
                 </div>
                 <div>
                     <label for="name">Fecha de nacimiento</label>
@@ -68,9 +59,7 @@
                 <div>
                     <label for="name">Domicilio </label>
                     <input type="text" id="adress" name="adress" placeholder = "Escribí tu domicilio">
-                    <% if (locals.errors && locals.errors.adress){ %> 
-                        <p class="text-danger"><%= errors.adress.msg %> </p>
-                        <% } %> 
+                   
                 </div>
                 <div>
                     <label>
@@ -96,27 +85,19 @@
                     <label>
                         Foto de usuario
                         <input type="file" id = "image" name="image" value="">
-                        <% if (locals.errors && locals.errors.imagen){ %> 
-                            <p class="text-danger"><%= errors.imagen.msg %> </p>
-                            <% } %>
+                        
                     </label>
                 </div>
                 <div class="registerBox">
                     <label>
                         Contraseña
-                        <input type="password" name="password" value="" placeholder = "Contraseña" >
-                        <% if (locals.errors && locals.errors.contrasenia){ %> 
-                            <p class="text-danger"><%= errors.contrasenia.msg %> </p>
-                            <% } %> 
+                        <input type="password" name="password" id = 'pass' value="" placeholder = "Contraseña" >
                     </label>
                 </div>
                 <div class="registerBox">
                     <label>
                         Confirmar contraseña
-                        <input type="password" type="pattern" name="confirmar" value="" placeholder = "Confirma tu contraseña" >
-                        <% if (locals.errors && locals.errors.confirmar){ %> 
-                            <p class="text-danger"><%= errors.confirmar.msg %> </p>
-                            <% } %> 
+                        <input type="password" type="pattern"id='pass2' name="confirmar" value="" placeholder = "Confirma tu contraseña" >
                     </label>
                 </div>
 
@@ -135,7 +116,7 @@
     </div>
 
 </footer>
-       
+<script type= 'text/javascript' src="/js/register.js"></script>
 </body>
 
 </html>
