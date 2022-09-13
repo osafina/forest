@@ -62,7 +62,7 @@ router.get('/logout', usersControllers.logout),
 router.get("/",usersControllers.index); //solo vista adm
 
 
-router.post('/register',uploadFile.single('image'), validateCreateForm, usersControllers.processregister);
+router.post('/register',uploadFile.single('image'), usersControllers.processregister);
 router.post('/login',usersControllers.processLogin);
 
 

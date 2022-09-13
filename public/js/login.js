@@ -1,18 +1,19 @@
-window.addEventListener('load',function(){
-    let formulario = document.querySelector('form.login');
-    
-    let btnsubmit = querySelector('#btnRegister');
-    let inputmail = querySelector('#email');
-    let contraseña = querySelector('#pass');
 
-    formulario.addEventListener('click',function(e){
+    let formulario = document.querySelector('#login');
+    let mail = document.getElementById('email');
+    let pass =document.getElementById('pass');
+
+     console.log(formulario)
+
+
+    formulario.addEventListener('submit',function(e){
         e.preventDefault();
         let errores = {};
-        if(inputmail.value.length<1){
-            errores.email='este campo debe estar completo'
+        if(mail.value.length<1){
+            alert('este campo debe estar completo');
         }
-        if(contraseña.value.length<1){
-            errores.password = 'este campo debe estar completo'
+        if(pass.value.length<1){
+            alert( 'este campo debe estar completo');
         };
         }
-    )})
+    )
