@@ -52,16 +52,25 @@
                 <div>
                     <label for="name" class="labelcreate">Nombre del producto:</label>
                     <input type="text" id="name" name="name" placeholder="Ej: potus, ficus,etc" class="labelinput">
+                    <% if (locals.errors && locals.errors.name){ %> 
+                        <p class="text-danger"><%= errors.name.msg %> </p>
+                        <% } %> 
                 </div>
                 
                 <div>
                     <label for="price" class="labelcreate">Precio del producto:</label>
                     <input type="text" id="price" name="price" placeholder="Ej: 5678" class="labelinput">
+                    <% if (locals.errors && locals.errors.price){ %> 
+                        <p class="text-danger"><%= errors.price.msg %> </p>
+                        <% } %> 
                 </div>
 
                 <div>
                     <label class="labelcreate">Imagen de producto</label>
                     <input type="file" class="labelinput"  id= "imagen" name="imagen" value="Foto de Usuario">
+                    <% if (locals.errors && locals.errors.imagen){ %> 
+                        <p class="text-danger"><%= errors.imagen.msg %> </p>
+                        <% } %> 
                 </div>
                 
                 <div>
@@ -92,10 +101,16 @@
                 <div>
                     <label for="description" class="labelcreate">Descripción:</label>
                     <textarea name="description" id="description" class="labelinput"></textarea>
+                    <% if (locals.errors && locals.errors.name){ %> 
+                        <p class="text-danger"><%= errors.name.msg %> </p>
+                        <% } %> 
                 </div>
                 <div>
                     <label class="labelcreate">Stock:  </label>
                     <input type="number" class="stock"  id= "stock" name="stock" value="stock">
+                    <% if (locals.errors && locals.errors.name){ %> 
+                        <p class="text-danger"><%= errors.name.msg %> </p>
+                        <% } %> 
                 </div>
 
                 <div>

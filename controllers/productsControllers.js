@@ -3,6 +3,7 @@ const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
 const Op = db.Sequelize.Op;
+const { validationResult } = require('express-validator');
 
 const productsControllers = {
     carrito: (req, res) => {
@@ -26,7 +27,8 @@ const productsControllers = {
     
 
     store: (req, res) => {
-        if (req.file) {
+        let resultValidation = validationResult(req)
+        if (req.file && resultValidation.lenght == 0) {
     let newProduct = {
             ...req.body,
             name: req.body.name,
@@ -38,7 +40,10 @@ const productsControllers = {
         
         Product.create(newProduct).then (() => res.redirect('../products'));
 
-    } else { res.send('No adjunto la imgaen')}},
+    } else { 
+        
+        return res.render( 'crearProducto', {errors: resultValidation.mapped(), old: req.body })
+    }},
 
     detalle: (req, res) => {
         let idParams = req.params.id;
@@ -47,7 +52,7 @@ const productsControllers = {
 			res.render("detalleProducto.ejs", { producto });
 		});
 	},
-
+    
     modificarProducto: (req, res) => {
         let idParams = req.params.id;
         Product.findByPk (idParams)

@@ -2,7 +2,7 @@ const express = require ('express');
 const productsControllers = require ('../controllers/productsControllers');
 const multer = require('multer');
 const path = require('path');
-
+const { body } = require('express-validator');
 const router = express.Router();
 
 router.get ("/", productsControllers.index);
@@ -21,8 +21,34 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({storage});
 
-router.get('/crearProducto',productsControllers.create);
-router.post('/',uploadFile.single('imagen'), productsControllers.store);
+const validateCreateForm = [
+    body('name').notEmpty().withMessage('Completar nombre.'),
+   body('price').notEmpty().withMessage('Colocar un precio.'),
+    body('category').notEmpty().withMessage('Ingresar categoria'), 
+    body('description').notEmpty().withMessage('Completar descripción.'),
+    body('stock').notEmpty().withMessage('Completar campo con un número entero.'),
+    body('image').custom((value, { req }) => {
+        let file = req.file;
+    let acceptedExt = ['.jpg', '.png', '.gif'];
+        if(!file) {
+            throw new Error ('Tenes que subir una imagen.')
+        } 
+        
+            else {
+                let fileExt = file.originalname;
+
+                if (!acceptedExt.includes(path.extname(fileExt))) {
+                   throw new Error (`Las extensiones permitidas de archivos son ${fileExt.join(', ')}`);
+                }
+
+        }
+
+        return true 
+    }) 
+]
+
+router.get('/crearProducto', productsControllers.create);
+router.post('/', uploadFile.single('imagen'), validateCreateForm, productsControllers.store);
 router.get('/modificarProducto/:id/', productsControllers.modificarProducto)
 router.put('/modificarProducto/:id/', productsControllers.update)
 router.delete('/eliminar/:id/', productsControllers.destroy)
