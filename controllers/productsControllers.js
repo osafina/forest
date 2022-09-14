@@ -35,10 +35,10 @@ const productsControllers = {
             price: req.body.price,
             imagen: req.file.originalname,
             description: req.body.description,
-            stock: req.body.stock          
+                     
         }            
         
-        Product.create(newProduct).then (() => res.redirect('../products'));
+        Product.create(newProduct).then (() => res.redirect('http://localhost:3030/products'));
 
     } else { 
         
@@ -68,6 +68,7 @@ const productsControllers = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
+            
         }
 
     Product.update( newProduct, {
