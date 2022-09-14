@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-//const userLoggedMiddleware = require('/Users/Fede/Documents/Repositorios/forest/middleware/userlLoggedMiddleware/userLoggedMiddleware')
+const userLoggedMiddleware = require('./middleware/userlLoggedMiddleware/userLoggedMiddleware')
 
 
 
