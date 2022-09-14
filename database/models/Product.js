@@ -32,7 +32,12 @@ let alias = "Product"
         updatedAt: 
             {     
             type:DataTypes.JSON
+        },
+        createdAt: 
+            {     
+            type:DataTypes.JSON
         },   
+       
     }
     let config= {
        tableName:"product",

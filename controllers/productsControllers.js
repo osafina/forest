@@ -2,7 +2,6 @@ const path = require('path');
 const fs = require('fs');
 const db = require('../database/models');
 const Product = db.Product;
-const Op = db.Sequelize.Op;
 const { validationResult } = require('express-validator');
 
 const productsControllers = {
@@ -28,7 +27,7 @@ const productsControllers = {
 
     store: (req, res) => {
         let resultValidation = validationResult(req)
-        if (req.file && resultValidation.lenght == 0) {
+        if (req.file && resultValidation.isEmpty()) {
     let newProduct = {
             ...req.body,
             name: req.body.name,
@@ -36,9 +35,11 @@ const productsControllers = {
             imagen: req.file.originalname,
             description: req.body.description,
             stock: req.body.stock          
-        }            
-        
-        Product.create(newProduct).then (() => res.redirect('../products'));
+        }
+        console.log(newProduct)
+        Product.create(newProduct)            
+        .then(() => res.redirect("http://localhost:3030/"))
+        .catch(err => res.send(err));
 
     } else { 
         
