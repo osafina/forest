@@ -26,7 +26,6 @@ const validateCreateForm = [
    body('price').notEmpty().withMessage('Colocar un precio.'),
     body('category').notEmpty().withMessage('Ingresar categoria'), 
     body('description').notEmpty().withMessage('Completar descripción.'),
-    body('stock').notEmpty().withMessage('Completar campo con un número entero.'),
     body('image').custom((value, { req }) => {
         let file = req.file;
     let acceptedExt = ['.jpg', '.png', '.gif'];

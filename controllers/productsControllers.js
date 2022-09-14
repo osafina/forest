@@ -69,6 +69,7 @@ const productsControllers = {
             name: req.body.name,
             price: req.body.price,
             description: req.body.description,
+            
         }
 
     Product.update( newProduct, {
