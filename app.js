@@ -4,7 +4,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-//const userLoggedMiddleware = require('/Users/Fede/Documents/Repositorios/forest/middleware/userlLoggedMiddleware/userLoggedMiddleware')
+const userLoggedMiddleware = require('./middleware/userlLoggedMiddleware/userLoggedMiddleware')
 
 
 
@@ -21,7 +21,7 @@ app.use(logger('dev'));
 app.use(session( {secret:'mensaje secreto',
 reserve: false,
 saveUninitialized: false}));
-//app.use(userLoggedMiddleware)
+app.use(userLoggedMiddleware)
 app.set('view engine', 'ejs');
 
 const port = process.env.PORT || 3030;
