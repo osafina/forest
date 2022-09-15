@@ -32,13 +32,14 @@ const productsControllers = {
             ...req.body,
             name: req.body.name,
             price: req.body.price,
-            imagen: req.file.originalname,
+            imagen: req.file.filename,
             description: req.body.description,
             stock: req.body.stock          
         }
+
         console.log(newProduct)
         Product.create(newProduct)            
-        .then(() => res.redirect("http://localhost:3030/"))
+        .then(() => res.redirect("http://localhost:3030/products"))
         .catch(err => res.send(err));
 
     } else { 
